@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import addButtonIcon from "../../img/icon_plus_add.png";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import Form from "react-bootstrap/Form";
 
 export const Pepocho = () => {
 	const [show, setShow] = useState(false);
@@ -16,12 +17,19 @@ export const Pepocho = () => {
 			{/* </Button> */}
 			<Modal show={show} onHide={handleClose}>
 				<Modal.Header closeButton>
-					<Modal.Title>Modal heading</Modal.Title>
+					<Modal.Title>Add a new Room</Modal.Title>
 				</Modal.Header>
-				<Modal.Body>Woohoo, youre reading this text in a modal!</Modal.Body>
+				<Modal.Body>
+					<Form>
+						<Form.Group controlId="formNameRoom">
+							<Form.Label>Room Name</Form.Label>
+							<Form.Control className="inputNameRoom" type="string" />
+						</Form.Group>
+					</Form>
+				</Modal.Body>
 				<Modal.Footer>
-					<Button variant="primary" onClick={handleClose}>
-						Save Changes
+					<Button className="save-button" onClick={handleClose}>
+						Save
 					</Button>
 				</Modal.Footer>
 			</Modal>
