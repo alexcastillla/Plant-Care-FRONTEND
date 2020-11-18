@@ -1,0 +1,12 @@
+$green-color: #e3f8e8;
+$coral-color: #ff8785;
+
+.Save-register{
+    border-radius: 50px;
+    background: $coral-color;
+    border:none;
+}
+
+.Save-register:hover{
+    background-color: $coral-color;
+}

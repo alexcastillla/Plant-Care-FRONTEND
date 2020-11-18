@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import InputRegister from "./Registerinputs";
+import Form from "react-bootstrap/Form";
+import "../../styles/registermodal.scss";
 
 export const Registermodal = () => {
 	const [show, setShow] = useState(false);
@@ -20,13 +21,21 @@ export const Registermodal = () => {
 					<Modal.Title>Modal heading</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
-					<InputRegister />
+					<Form>
+						<Form.Group controlId="formBasicusername">
+							<Form.Label>Username</Form.Label>
+							<Form.Control type="text" />
+							<Form.Label>Email address</Form.Label>
+							<Form.Control type="email" />
+							<Form.Label>Password</Form.Label>
+							<Form.Control type="password" />
+							<Form.Label>Location</Form.Label>
+							<Form.Control type="text" />
+						</Form.Group>
+					</Form>
 				</Modal.Body>
 				<Modal.Footer>
-					<Button variant="secondary" onClick={handleClose}>
-						Close
-					</Button>
-					<Button variant="primary" onClick={handleClose}>
+					<Button className="Save-register" onClick={handleClose}>
 						Save Changes
 					</Button>
 				</Modal.Footer>
