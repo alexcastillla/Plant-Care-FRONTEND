@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import addButtonIcon from "../../img/icon_plus_add.png";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
@@ -10,9 +11,9 @@ export const Pepocho = () => {
 
 	return (
 		<div>
-			<Button variant="primary" onClick={handleShow}>
-				Launch demo modal
-			</Button>
+			{/* <Button className="add-button" onClick={handleShow}> */}
+			<img className="add-button-img" src={addButtonIcon} onClick={handleShow} />
+			{/* </Button> */}
 			<Modal show={show} onHide={handleClose}>
 				<Modal.Header closeButton>
 					<Modal.Title>Modal heading</Modal.Title>

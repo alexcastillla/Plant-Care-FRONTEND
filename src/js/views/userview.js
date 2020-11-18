@@ -4,8 +4,8 @@ import { Pepocho } from "../component/roomPanel";
 
 export const Userview = () => {
 	return (
-		<div>
-			<div className="text-center mt-5 room-panel">
+		<div className="mt-0">
+			<div className="text-center mt-0 room-panel">
 				<h1>Hola soy el panel en donde van a ir las estancias!</h1>
 				<Pepocho />
 			</div>
