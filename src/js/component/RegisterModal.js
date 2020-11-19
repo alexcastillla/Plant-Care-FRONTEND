@@ -31,7 +31,7 @@ export const Registermodal = () => {
 							<Form.Label>Username</Form.Label>
 							<Form.Control type="text" onChange={e => setUsername(e.target.value)} />
 							<Form.Label>Email address</Form.Label>
-							<Form.Control type="email" />
+							<Form.Control type="email" onChange={e => setEmail(e.target.value)} />
 							<Form.Label>Password</Form.Label>
 							<Form.Control type="password" />
 							<Form.Label>Location</Form.Label>
@@ -40,7 +40,12 @@ export const Registermodal = () => {
 					</Form>
 				</Modal.Body>
 				<Modal.Footer>
-					<Button className="Save-register" onClick={handleClose}>
+					<Button
+						className="Save-register"
+						type="submit"
+						onClick={() => {
+							actions.add_new_user(username, email, password, location);
+						}}>
 						Save Changes
 					</Button>
 				</Modal.Footer>
