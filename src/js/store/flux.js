@@ -2,6 +2,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			username: [],
+			email: [],
+			password: [],
+			location: [],
 
 			demo: [
 				{
@@ -23,19 +26,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 				console.log(user, "name");
 			},
 
-			add_new_email: email => {
-				getStore().username.push(email);
-				console.log(email, "example@hotail.com");
+			add_new_email: emailUSer => {
+				getStore().email.push(emailUSer);
+				console.log(emailUSer, "example@hotail.com");
 			},
 
-			add_new_password: password => {
-				getStore().username.push(password);
-				console.log(password, "1234");
+			add_new_password: passwordUser => {
+				getStore().password.push(passwordUser);
+				console.log(passwordUSer, "1234");
 			},
 
-			add_new_location: location => {
-				getStore().username.push(location);
-				console.log(location, honolulu);
+			add_new_location: locationUser => {
+				getStore().location.push(locationUser);
+				console.log(locationUser, honolulu);
 			}
 
 			// 	addUser: (username, email, password, location) => {
