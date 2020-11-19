@@ -13,7 +13,7 @@ export const Registermodal = () => {
 	return (
 		<>
 			<Button variant="primary" onClick={handleShow}>
-				Launch demo modal
+				Join
 			</Button>
 
 			<Modal show={show} onHide={handleClose} animation={false}>
