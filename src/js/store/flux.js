@@ -11,7 +11,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					]
 				},
 				{
-					Name_room: "Terraza",
+					name_room: "Terraza",
 					plants: [
 						{
 							Name_plants: "Rosalia"
@@ -19,7 +19,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					]
 				},
 				{
-					Name_room: "Salón",
+					name_room: "Salón",
 					plants: [
 						{
 							Name_plants: "Juanito"

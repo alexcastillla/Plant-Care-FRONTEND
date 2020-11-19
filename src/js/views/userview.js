@@ -4,6 +4,7 @@ import { Pepocho } from "../component/roomPanel";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
+import { ButtonRoomGenerator } from "../component/roomGeneratorMap";
 
 export const Userview = () => {
 	return (
@@ -19,9 +20,10 @@ export const Userview = () => {
 						<Pepocho />
 					</Col>
 					<Col sm={9} className="Add-column-room-viewlist">
-						<Button className="room-item-view">
+						{/* <Button className="room-item-view">
 							<p>Terraza</p>
-						</Button>
+						</Button> */}
+						<ButtonRoomGenerator />
 					</Col>
 				</Row>
 			</div>
