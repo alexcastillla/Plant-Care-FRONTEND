@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { Context } from "../store/appContext";
 import addButtonIcon from "../../img/icon_plus_add.png";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
@@ -6,6 +7,9 @@ import Form from "react-bootstrap/Form";
 
 export const Pepocho = () => {
 	const [show, setShow] = useState(false);
+	const { store, actions } = useContext(Context);
+	const [roomName, setRoomName] = useState("");
+	console.log(roomName);
 
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
@@ -23,12 +27,24 @@ export const Pepocho = () => {
 					<Form>
 						<Form.Group controlId="formNameRoom">
 							<Form.Label>Room Name</Form.Label>
-							<Form.Control className="inputNameRoom" type="string" />
+							<Form.Control
+								className="inputNameRoom"
+								type="string"
+								id="taskinputroom"
+								onChange={e => setRoomName(e.target.value)}
+							/>
 						</Form.Group>
 					</Form>
 				</Modal.Body>
 				<Modal.Footer>
-					<Button className="save-button" onClick={handleClose}>
+					<Button
+						className="save-button"
+						type="submit"
+						onClick={() => {
+							handleClose();
+							console.log(roomName, "juan");
+							actions.addRoom(roomName);
+						}}>
 						Save
 					</Button>
 				</Modal.Footer>

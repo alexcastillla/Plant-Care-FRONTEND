@@ -2,30 +2,30 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			room: [
-				{
-					name_room: "Habitación",
-					plants: [
-						{
-							Name_plants: "Petunia"
-						}
-					]
-				},
-				{
-					name_room: "Terraza",
-					plants: [
-						{
-							Name_plants: "Rosalia"
-						}
-					]
-				},
-				{
-					name_room: "Salón",
-					plants: [
-						{
-							Name_plants: "Juanito"
-						}
-					]
-				}
+				// {
+				// 	name_room: "Habitación",
+				// 	plants: [
+				// 		{
+				// 			Name_plants: "Petunia"
+				// 		}
+				// 	]
+				// },
+				// {
+				// 	name_room: "Terraza",
+				// 	plants: [
+				// 		{
+				// 			Name_plants: "Rosalia"
+				// 		}
+				// 	]
+				// },
+				// {
+				// 	name_room: "Salón",
+				// 	plants: [
+				// 		{
+				// 			Name_plants: "Juanito"
+				// 		}
+				// 	]
+				// }
 			],
 			demo: [
 				{
@@ -41,6 +41,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
+			addRoom: roomName => {
+				console.log(roomName, "juan prueba");
+				getStore().room.push({ name_room: roomName, plants: [] });
+				// const array = getStore().room;
+				// setStore([...array], array.push(roomName));
+			},
+
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
