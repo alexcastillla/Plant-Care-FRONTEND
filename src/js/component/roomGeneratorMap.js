@@ -4,18 +4,16 @@ import { Link } from "react-router-dom";
 
 export const ButtonRoomGenerator = () => {
 	const { store, actions } = useContext(Context);
-	console.log(store.room, "pepe");
-	return (
-		<div className="">
-			{store.room.map((item, index) => {
-				return (
-					<div className="" key={index}>
-						<li>
-							<span>{item.name_room}</span>
-						</li>
-					</div>
-				);
-			})}
-		</div>
-	);
+	console.log(store.room, "im the local store");
+	const [listItem, setListItem] = useState("");
+
+	useEffect(() => {
+		setListItem(
+			store.room.map((item, index) => {
+				return <li key={index}>{item.name_room}</li>;
+			})
+		);
+	});
+
+	return <div className="">{listItem}</div>;
 };

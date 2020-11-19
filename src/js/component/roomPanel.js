@@ -5,11 +5,10 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 
-export const Pepocho = () => {
+export const ModalRoomInputs = () => {
 	const [show, setShow] = useState(false);
 	const { store, actions } = useContext(Context);
 	const [roomName, setRoomName] = useState("");
-	console.log(roomName);
 
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
@@ -24,13 +23,12 @@ export const Pepocho = () => {
 					<Modal.Title>Add a new Room</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
-					<Form>
+					<Form onSubmit={() => handleSubmit()}>
 						<Form.Group controlId="formNameRoom">
 							<Form.Label>Room Name</Form.Label>
 							<Form.Control
 								className="inputNameRoom"
 								type="string"
-								id="taskinputroom"
 								onChange={e => setRoomName(e.target.value)}
 							/>
 						</Form.Group>

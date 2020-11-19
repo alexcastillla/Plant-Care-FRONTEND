@@ -2,30 +2,30 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			room: [
-				// {
-				// 	name_room: "Habitación",
-				// 	plants: [
-				// 		{
-				// 			Name_plants: "Petunia"
-				// 		}
-				// 	]
-				// },
-				// {
-				// 	name_room: "Terraza",
-				// 	plants: [
-				// 		{
-				// 			Name_plants: "Rosalia"
-				// 		}
-				// 	]
-				// },
-				// {
-				// 	name_room: "Salón",
-				// 	plants: [
-				// 		{
-				// 			Name_plants: "Juanito"
-				// 		}
-				// 	]
-				// }
+				{
+					name_room: "Habitación",
+					plants: [
+						{
+							Name_plants: "Petunia"
+						}
+					]
+				},
+				{
+					name_room: "Terraza",
+					plants: [
+						{
+							Name_plants: "Rosalia"
+						}
+					]
+				},
+				{
+					name_room: "Salón",
+					plants: [
+						{
+							Name_plants: "Juanito"
+						}
+					]
+				}
 			],
 			demo: [
 				{

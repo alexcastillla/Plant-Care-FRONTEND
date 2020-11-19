@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/userview.scss";
-import { Pepocho } from "../component/roomPanel";
+import { ModalRoomInputs } from "../component/roomPanel";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
@@ -17,12 +17,9 @@ export const Userview = () => {
 				</Row>
 				<Row className="mt-0">
 					<Col sm={3} className="Add-column-room">
-						<Pepocho />
+						<ModalRoomInputs />
 					</Col>
 					<Col sm={9} className="Add-column-room-viewlist">
-						{/* <Button className="room-item-view">
-							<p>Terraza</p>
-						</Button> */}
 						<ButtonRoomGenerator />
 					</Col>
 				</Row>
