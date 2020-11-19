@@ -15,7 +15,7 @@ export const Pepocho = () => {
 			{/* <Button className="add-button" onClick={handleShow}> */}
 			<img className="add-button-img" src={addButtonIcon} onClick={handleShow} />
 			{/* </Button> */}
-			<Modal show={show} onHide={handleClose}>
+			<Modal show={show} onHide={handleClose} className="modal-new-room">
 				<Modal.Header closeButton>
 					<Modal.Title>Add a new Room</Modal.Title>
 				</Modal.Header>

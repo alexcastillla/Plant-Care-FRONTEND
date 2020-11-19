@@ -1,11 +1,13 @@
 $green-color: #e3f8e8;
 $coral-color: #ff8785;
+$green-button-color: #009ba0;
+$black-as-blue: #2c3e50;
+$white: #ffff;
 
 .room-panel{
-    border: solid red;
     border-bottom-right-radius: 100px;
     background: $green-color;
-    height: 20vh;
+    height: 22vh;
     margin-top: 0;
 }
 .card-panel{
@@ -26,4 +28,37 @@ $coral-color: #ff8785;
 }
 .inputNameRoom{
     border-radius: 50px;
+}
+.Add-column-room{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Add-column-room-viewlist{
+    display: flex;
+    align-items: center;
+}
+.room-item-view{
+    background: $green-button-color;
+    border: none;
+    border-radius: 50px;
+    color: $white;
+    font-weight: bold;
+    width: 10rem;
+    height: 2.5rem;
+}
+
+.modal-new-room{
+    border-radius: 50px;
+}
+
+.Add-column-room-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.Add-column-room-name p{
+    font-size: 1.8rem;
+    font-weight: bold;
 }
