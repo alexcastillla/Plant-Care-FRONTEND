@@ -9,6 +9,13 @@ export const Registermodal = () => {
 
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
+	const CreateAccountForm = props => {
+		const { store, actions } = useContext(Context);
+		const [username, setUsername] = useState("");
+		const [email, setEmail] = useState("");
+		const [password, setPassword] = useState("");
+		const [location, setLocation] = useState("");
+	};
 
 	return (
 		<>
