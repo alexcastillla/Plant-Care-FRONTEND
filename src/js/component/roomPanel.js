@@ -17,14 +17,17 @@ export const ModalRoomInputs = () => {
 
 	return (
 		<Fragment>
-			{/* <Button className="add-button" onClick={handleShow}> */}
 			<img className="add-button-img" src={addButtonIcon} onClick={handleShow} />
-			{/* </Button> */}
-			<Modal show={show} onHide={handleClose} className="ml-3">
+			<Modal show={show} onHide={handleClose} className="form-room">
 				<Modal.Body className="modal-room">
 					<Modal.Title>Add a new Room</Modal.Title>
 					<img className="room-logo-img" src={logoRoomAdd} />
-					<Form onSubmit={() => handleSubmit()} className="form-input-add-room">
+					<Form
+						onSubmit={e => {
+							e.preventDefault();
+							// e.handleSubmit();
+						}}
+						className="form-input-add-room">
 						<Form.Group controlId="formNameRoom">
 							<Form.Label className="Modal-Add-name-input">Room Name</Form.Label>
 							<Form.Control
@@ -39,7 +42,6 @@ export const ModalRoomInputs = () => {
 						type="submit"
 						onClick={() => {
 							handleClose();
-							console.log(roomName, "juan");
 							actions.addRoom(roomName);
 						}}>
 						Save
@@ -49,3 +51,7 @@ export const ModalRoomInputs = () => {
 		</Fragment>
 	);
 };
+
+function noenter() {
+	return !(window.event && window.event.keyCode == 13);
+}
