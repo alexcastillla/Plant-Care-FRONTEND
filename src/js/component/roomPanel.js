@@ -20,13 +20,13 @@ export const ModalRoomInputs = () => {
 			{/* <Button className="add-button" onClick={handleShow}> */}
 			<img className="add-button-img" src={addButtonIcon} onClick={handleShow} />
 			{/* </Button> */}
-			<Modal show={show} onHide={handleClose}>
+			<Modal show={show} onHide={handleClose} className="ml-3">
 				<Modal.Body className="modal-room">
 					<Modal.Title>Add a new Room</Modal.Title>
 					<img className="room-logo-img" src={logoRoomAdd} />
 					<Form onSubmit={() => handleSubmit()} className="form-input-add-room">
 						<Form.Group controlId="formNameRoom">
-							<Form.Label>Room Name</Form.Label>
+							<Form.Label className="Modal-Add-name-input">Room Name</Form.Label>
 							<Form.Control
 								className="inputNameRoom"
 								type="string"

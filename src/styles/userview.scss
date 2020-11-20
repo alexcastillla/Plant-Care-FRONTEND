@@ -72,3 +72,12 @@ $white: #ffff;
     height: 100%;
     text-align: center;
 }
+
+.modal-dialog {
+    max-width: 20rem;
+}
+
+.modal-content{
+    border-radius: 25px;
+    border: 0.5rem $black-as-blue;
+}
