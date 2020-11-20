@@ -33,7 +33,11 @@ export const Registermodal = () => {
 							<Form.Label>Email address</Form.Label>
 							<Form.Control className="email" onChange={e => setEmail(e.target.value)} />
 							<Form.Label>Password</Form.Label>
-							<Form.Control className="password" onChange={e => setPassword(e.target.value)} />
+							<Form.Control
+								type="password"
+								className="psswd"
+								onChange={e => setPassword(e.target.value)}
+							/>
 							<Form.Label>Location</Form.Label>
 							<Form.Control className="location-text" onChange={e => setLocation(e.target.value)} />
 						</Form.Group>
@@ -44,7 +48,7 @@ export const Registermodal = () => {
 						className="Save-register btn-block"
 						type="submit"
 						onClick={() => {
-							actions.add_new_user(username, email, password, location);
+							actions.addUser(username, email, password, location);
 						}}>
 						Save Changes
 					</Button>

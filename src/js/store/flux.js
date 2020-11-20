@@ -28,22 +28,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				getStore().email.push(emailUSer);
 				getStore().password.push(passwordUser);
 				getStore().location.push(locationUser);
-				console.log(getStore().password, passwordUser, getStore().location, locationUser);
-			},
-
-			add_new_email: emailUSer => {
-				getStore().email.push(emailUSer);
-				console.log(emailUSer, "example@hotail.com");
-			},
-
-			add_new_password: passwordUser => {
-				getStore().password.push(passwordUser);
-				console.log(passwordUSer, "1234");
-			},
-
-			add_new_location: locationUser => {
-				getStore().location.push(locationUser);
-				console.log(locationUser, honolulu);
 			},
 
 			addUser: (username, email, password, location) => {
@@ -51,9 +35,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					method: "POST",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
-						username: name,
+						username: username,
 						email: email,
-						password: pass,
+						password: password,
 						location: location
 					})
 				}).then(() => {
