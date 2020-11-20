@@ -8,12 +8,17 @@ export const ButtonRoomGenerator = () => {
 	const [listItem, setListItem] = useState("");
 
 	useEffect(() => {
+		// console.log("pepe");
 		setListItem(
 			store.room.map((item, index) => {
-				return <li key={index}>{item.name_room}</li>;
+				return (
+					<button className="span-room-name" key={index}>
+						<p className="m-0">{item.name_room}</p>
+					</button>
+				);
 			})
 		);
 	});
 
-	return <div className="">{listItem}</div>;
+	return <div className="hola">{listItem}</div>;
 };

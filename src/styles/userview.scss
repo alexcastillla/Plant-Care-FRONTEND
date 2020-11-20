@@ -62,3 +62,16 @@ $white: #ffff;
     font-size: 1.8rem;
     font-weight: bold;
 }
+
+.span-room-name{
+    border: solid $green-button-color;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 0 1rem 0.4rem 1rem;
+    color: $white;
+    margin-left: 0.5rem;
+    border-radius: 50px;
+    background: $green-button-color;
+    height: 100%;
+    text-align: center;
+}
