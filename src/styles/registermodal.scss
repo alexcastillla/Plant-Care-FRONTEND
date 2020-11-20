@@ -8,8 +8,52 @@ $white: #ffff;
     border-radius: 50px;
     background: $coral-color;
     border:none;
+    
 }
 
 .Save-register:hover{
     background-color: $coral-color;
+}
+
+// .join-button-home{
+//     border-radius: 50px;
+//     background-color: $coral-color;
+//     border: none;
+// }
+.join-button-home{
+    background-color: $coral-color;
+    overflow: hidden;
+    width: 350px;
+    border: none;
+    border-radius: 50px;
+}
+
+.join-button-home:active{
+    background-color: $coral-color;
+    border-radius: 50px;
+    border: none;
+}
+
+.form-group{
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+   
+}
+
+.user-text{
+    border-radius: 50px;
+    font-weight:bold;
+}
+
+.email{
+    border-radius: 50px;
+}
+
+.password{
+    border-radius: 50px;
+}
+
+.location-text{
+    border-radius: 50px;
 }
