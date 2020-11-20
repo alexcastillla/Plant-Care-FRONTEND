@@ -21,9 +21,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 
 		actions: {
-			add_new_user: user => {
+			add_new_user: (user, emailUSer, passwordUser, locationUser) => {
 				getStore().username.push(user);
-				console.log(user, "name");
+				getStore().email.push(emailUSer);
+				getStore().password.push(passwordUser);
+				getStore().location.push(locationUser);
+				console.log(getStore().password, passwordUser, getStore().location, locationUser);
 			},
 
 			add_new_email: emailUSer => {
