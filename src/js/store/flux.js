@@ -1,6 +1,9 @@
+const url = "";
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			currentUser: [],
 			room: [
 				{
 					name_room: "Habitación",
@@ -26,18 +29,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 						}
 					]
 				}
-			],
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
 			]
 		},
 		actions: {
@@ -47,7 +38,25 @@ const getState = ({ getStore, getActions, setStore }) => {
 				// const array = getStore().room;
 				// setStore([...array], array.push(roomName));
 			},
-
+			addRoomAPI: roomName => {
+				fetch(url + "room/", {
+					method: "POST",
+					headers: { "Content-type": "application/json" },
+					body: JSON.stringify({
+						name_room: rommName,
+						username: getStore().currentUser.id
+					})
+				}).then(() => {
+					getActions().getRoom();
+				});
+			},
+			getRoomAPI: () => {
+				fetch(url + "room/")
+					.then(res => res.json())
+					.then(result => {
+						console.log("getting room", result), setStore({ room: result });
+					});
+			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");

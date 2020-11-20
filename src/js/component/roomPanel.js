@@ -43,6 +43,7 @@ export const ModalRoomInputs = () => {
 						onClick={() => {
 							handleClose();
 							actions.addRoom(roomName);
+							actions.addRoomAPI(roomName);
 						}}>
 						Save
 					</Button>
