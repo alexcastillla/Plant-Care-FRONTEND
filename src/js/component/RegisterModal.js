@@ -49,6 +49,7 @@ export const Registermodal = () => {
 						type="submit"
 						onClick={() => {
 							actions.addUser(username, email, password, location);
+							alert("User account has been created");
 						}}>
 						Save Changes
 					</Button>

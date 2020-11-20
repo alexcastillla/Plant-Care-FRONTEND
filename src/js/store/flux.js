@@ -40,8 +40,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 						password: password,
 						location: location
 					})
-				}).then(() => {
-					getActions().getUser();
 				});
 			}
 
