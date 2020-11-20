@@ -8,7 +8,6 @@ export const ButtonRoomGenerator = () => {
 	const [listItem, setListItem] = useState("");
 
 	useEffect(() => {
-		// console.log("pepe");
 		setListItem(
 			store.room.map((item, index) => {
 				return (

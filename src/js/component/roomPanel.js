@@ -1,6 +1,8 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, Fragment } from "react";
 import { Context } from "../store/appContext";
+import "../../styles/modalRoomAdd.scss";
 import addButtonIcon from "../../img/icon_plus_add.png";
+import logoRoomAdd from "../../img/logo_room_add.png";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
@@ -14,16 +16,15 @@ export const ModalRoomInputs = () => {
 	const handleShow = () => setShow(true);
 
 	return (
-		<div>
+		<Fragment>
 			{/* <Button className="add-button" onClick={handleShow}> */}
 			<img className="add-button-img" src={addButtonIcon} onClick={handleShow} />
 			{/* </Button> */}
-			<Modal show={show} onHide={handleClose} className="modal-new-room">
-				<Modal.Header closeButton>
+			<Modal show={show} onHide={handleClose}>
+				<Modal.Body className="modal-room">
 					<Modal.Title>Add a new Room</Modal.Title>
-				</Modal.Header>
-				<Modal.Body>
-					<Form onSubmit={() => handleSubmit()}>
+					<img className="room-logo-img" src={logoRoomAdd} />
+					<Form onSubmit={() => handleSubmit()} className="form-input-add-room">
 						<Form.Group controlId="formNameRoom">
 							<Form.Label>Room Name</Form.Label>
 							<Form.Control
@@ -33,10 +34,8 @@ export const ModalRoomInputs = () => {
 							/>
 						</Form.Group>
 					</Form>
-				</Modal.Body>
-				<Modal.Footer>
 					<Button
-						className="save-button"
+						className="save-button btn-block"
 						type="submit"
 						onClick={() => {
 							handleClose();
@@ -45,8 +44,8 @@ export const ModalRoomInputs = () => {
 						}}>
 						Save
 					</Button>
-				</Modal.Footer>
+				</Modal.Body>
 			</Modal>
-		</div>
+		</Fragment>
 	);
 };
