@@ -17,7 +17,7 @@ export const Registermodal = () => {
 
 	return (
 		<>
-			<Button variant="primary" onClick={handleShow}>
+			<Button className="join-button-home" onClick={handleShow}>
 				Join
 			</Button>
 
@@ -29,19 +29,19 @@ export const Registermodal = () => {
 					<Form>
 						<Form.Group controlId="formBasicusername">
 							<Form.Label>Username</Form.Label>
-							<Form.Control type="text" onChange={e => setUsername(e.target.value)} />
+							<Form.Control className="user-text" onChange={e => setUsername(e.target.value)} />
 							<Form.Label>Email address</Form.Label>
-							<Form.Control type="email" onChange={e => setEmail(e.target.value)} />
+							<Form.Control className="email" onChange={e => setEmail(e.target.value)} />
 							<Form.Label>Password</Form.Label>
-							<Form.Control type="password" onChange={e => setPassword(e.target.value)} />
+							<Form.Control className="password" onChange={e => setPassword(e.target.value)} />
 							<Form.Label>Location</Form.Label>
-							<Form.Control type="text" onChange={e => setLocation(e.target.value)} />
+							<Form.Control className="location-text" onChange={e => setLocation(e.target.value)} />
 						</Form.Group>
 					</Form>
 				</Modal.Body>
 				<Modal.Footer>
 					<Button
-						className="Save-register"
+						className="Save-register btn-block"
 						type="submit"
 						onClick={() => {
 							actions.add_new_user(username, email, password, location);
