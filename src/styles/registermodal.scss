@@ -43,18 +43,23 @@ $white: #ffff;
 
 .user-text{
     border-radius: 50px;
+    margin-bottom: 0.5rem;
+    
 }
 
 .email{
     border-radius: 50px;
+    margin-bottom: 0.5rem;
 }
 
 .psswd{
     border-radius: 50px;
+    margin-bottom: 0.5rem;
 }
 
 .location-text{
     border-radius: 50px;
+    margin-bottom: 0.5rem;
 }
 
 .modal-dialog {
@@ -63,4 +68,37 @@ $white: #ffff;
 .modal-content{
     border-radius: 25px;
     border: 0.5rem $black-as-blue;
+}
+.Errormesage{
+    display: none;
+}
+.Errormesageshow{
+    text-align: center;
+    background-color:#ffcccc;
+    color: #9b0000;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+
+}
+.logo2{
+    width: 14rem; 
+    margin-left: 2rem;
+}
+.logocontainer{
+    width: 100%;
+    margin: 0;
+    display:flex;
+    justify-content: center;
+}
+.h4{
+    width: 100%;
+}
+.div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.profilephoto{
+    width: 8rem;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
+import logo2 from "../../img/logo2.jpg";
 import "../../styles/home.scss";
 import { Registermodal } from "../component/RegisterModal";
 import "../../styles/registermodal.scss";
