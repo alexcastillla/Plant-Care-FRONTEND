@@ -52,7 +52,3 @@ export const ModalRoomInputs = () => {
 		</Fragment>
 	);
 };
-
-function noenter() {
-	return !(window.event && window.event.keyCode == 13);
-}

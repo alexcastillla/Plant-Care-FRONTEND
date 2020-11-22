@@ -1,0 +1,27 @@
+$green-color: #e3f8e8;
+$coral-color: #ff8785;
+$green-button-color: #009ba0;
+$black-as-blue: #2c3e50;
+$white: #ffff;
+
+.navbar{
+    height: 7vh;
+    background-color: $white;
+}
+.logo-navbar{
+    height: 2.8rem;
+    margin-left: 2rem;
+}
+.btn-navbar-view{
+    border: solid $green-color;
+    margin-right: 2rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding: 0 1rem 0.4rem 1rem;
+    color: $black-as-blue;
+    border-radius: 50px;
+    background: $green-color;
+    height: 100%;
+    width: 10rem;
+    text-align: center;
+}
