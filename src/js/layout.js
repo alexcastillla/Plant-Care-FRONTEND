@@ -4,6 +4,7 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
+import { Error } from "./views/error";
 import { Single } from "./views/single";
 import { Userview } from "./views/userview";
 
@@ -35,7 +36,7 @@ const Layout = () => {
 							<Single />
 						</Route>
 						<Route>
-							<h1>Not found!</h1>
+							<Error />
 						</Route>
 					</Switch>
 					<Footer />
