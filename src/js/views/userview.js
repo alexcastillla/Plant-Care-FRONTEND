@@ -5,6 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import { ButtonRoomGenerator } from "../component/roomGeneratorMap";
+import { RoomGeneratorPlants } from "../component/PlantsRoomGenerator";
 
 export const Userview = () => {
 	return (
@@ -24,8 +25,10 @@ export const Userview = () => {
 					</Col>
 				</Row>
 			</div>
-			<div className="text-center mt-5 card-panel">
-				<h1>Hola soy el panel en donde van a ir las plantas!</h1>
+			<div className="mt-5 plants-panel">
+				<Col>
+					<RoomGeneratorPlants />
+				</Col>
 			</div>
 		</div>
 	);

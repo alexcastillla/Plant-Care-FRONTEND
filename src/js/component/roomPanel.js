@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext, Fragment } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/modalRoomAdd.scss";
-import addButtonIcon from "../../img/icon_plus_add.png";
 import logoRoomAdd from "../../img/logo_room_add.png";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
@@ -17,7 +16,7 @@ export const ModalRoomInputs = () => {
 
 	return (
 		<Fragment>
-			<img className="add-button-img" src={addButtonIcon} onClick={handleShow} />
+			<i className="fas fa-plus-circle fa-2x" onClick={handleShow} />
 			<Modal show={show} onHide={handleClose} className="form-room">
 				<Modal.Body className="modal-room">
 					<Modal.Title>Add a new Room</Modal.Title>
@@ -25,7 +24,6 @@ export const ModalRoomInputs = () => {
 					<Form
 						onSubmit={e => {
 							e.preventDefault();
-							// e.handleSubmit();
 						}}
 						className="form-input-add-room">
 						<Form.Group controlId="formNameRoom">

@@ -1,19 +1,19 @@
 import React, { Component, useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
+import "../../styles/PlantsRoomGenerator.scss";
 
-export const ButtonRoomGenerator = () => {
+export const RoomGeneratorPlants = () => {
 	const { store, actions } = useContext(Context);
-	console.log(store.room, "im the local store");
 	const [listItem, setListItem] = useState("");
 
 	useEffect(() => {
 		setListItem(
 			store.room.map((item, index) => {
 				return (
-					<button className="span-room-name" key={index}>
-						<p className="m-0">{item.name_room}</p>
-					</button>
+					<ul className="" key={index}>
+						<li className="roomsName">{item.name_room}</li>
+					</ul>
 				);
 			})
 		);

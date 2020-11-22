@@ -7,12 +7,14 @@ $white: #ffff;
 .room-panel{
     border-bottom-right-radius: 100px;
     background: $green-color;
-    height: 22vh;
+    height: 20vh;
     margin-top: 0;
+    overflow: hidden;
 }
-.card-panel{
-    border: solid green;
+.plants-panel{
+    height: 80vh;
 }
+
 .add-button{
     border: none;
     background: none;
@@ -56,6 +58,7 @@ $white: #ffff;
 }
 
 .Add-column-room-name p{
+    color: $black-as-blue;
     font-size: 2rem;
     font-weight: bold;
 }
