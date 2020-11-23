@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import LogoNavbar from "../../img/logo_navbar.jpg";
-import "../../styles/navbar.scss";
+import "../../styles/navbar_username.scss";
 
-export const Navbar = () => {
+export const NavbarUser = () => {
 	return (
 		<nav className="navbar navbar-light mb">
-			<Link to="/username/view">
-				{/* <span className="navbar-brand mb-0 h1">React Boilerplate</span> */}
+			<Link to="/home">
 				<img className="logo-navbar" src={LogoNavbar} />
 			</Link>
 			<div className="ml-auto">

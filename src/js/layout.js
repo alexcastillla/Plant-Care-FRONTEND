@@ -10,7 +10,7 @@ import { Userview } from "./views/userview";
 
 import injectContext from "./store/appContext";
 
-import { Navbar } from "./component/navbar_user";
+import { NavbarUser } from "./component/navbar_user";
 import { NavbarHome } from "./component/navbar_home";
 import { Footer } from "./component/footer";
 
@@ -23,14 +23,14 @@ const Layout = () => {
 	return (
 		<div className="d-flex flex-column">
 			<BrowserRouter basename={basename}>
-				<NavbarHome />
 				<ScrollToTop>
 					<Switch>
-						<Route exact path="/">
+						<Route exact path="/home">
+							<NavbarHome />
 							<Home />
 						</Route>
 						<Route exact path="/username/view">
-							<Navbar />
+							<NavbarUser />
 							<Userview />
 							{/* <Demo /> */}
 						</Route>
