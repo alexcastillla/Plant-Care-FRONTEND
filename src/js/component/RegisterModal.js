@@ -36,7 +36,10 @@ export const Registermodal = () => {
 				<Modal.Body>
 					<p className={displayerror}>The {error} is invalid</p>
 					<div>
-						<img src={profilephoto} className="profilephoto" />
+						<i className="far fa-user-circle fa-5x" />
+					</div>
+					<div>
+						<input type="file" id="actual-btn" />
 					</div>
 					<Form>
 						<Form.Group controlId="formBasicusername">
