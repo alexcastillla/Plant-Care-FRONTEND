@@ -39,7 +39,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				// setStore([...array], array.push(roomName));
 			},
 			addRoomAPI: roomName => {
-				fetch(url + "room/", {
+				fetch(url + "/new-room", {
 					method: "POST",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
@@ -51,7 +51,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				});
 			},
 			getRoomAPI: () => {
-				fetch(url + "room/")
+				fetch(url + "/new-room")
 					.then(res => res.json())
 					.then(result => {
 						console.log("getting room", result), setStore({ room: result });
