@@ -4,30 +4,32 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			currentUser: [],
+			plants: [
+				{
+					id: 1,
+					id_room: 1,
+					name_plant: "Rosalia",
+					tipo_plant: "Exterior",
+					grow_phase: "Germinación",
+					sensor_number: "111"
+				},
+				{
+					id: 2,
+					id_room: 2,
+					name_plant: "Pepa",
+					tipo_plant: "Interior",
+					grow_phase: "Crecimiento",
+					sensor_number: "112"
+				}
+			],
 			room: [
 				{
-					name_room: "Habitación",
-					plants: [
-						{
-							Name_plants: "Petunia"
-						}
-					]
+					id: 1,
+					name_room: "Habitación"
 				},
 				{
-					name_room: "Terraza",
-					plants: [
-						{
-							Name_plants: "Rosalia"
-						}
-					]
-				},
-				{
-					name_room: "Salón",
-					plants: [
-						{
-							Name_plants: "Juanito"
-						}
-					]
+					id: 2,
+					name_room: "Terraza"
 				}
 			]
 		},
@@ -51,7 +53,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				});
 			},
 			getRoomAPI: () => {
-				fetch(url + "/new-room")
+				fetch(url + "username/new-room")
 					.then(res => res.json())
 					.then(result => {
 						console.log("getting room", result), setStore({ room: result });

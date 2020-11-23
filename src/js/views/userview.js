@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import { ButtonRoomGenerator } from "../component/roomGeneratorMap";
 import { RoomGeneratorPlants } from "../component/PlantsRoomGenerator";
+import { ModalNewPlant } from "../component/addNewPlant";
 
 export const Userview = () => {
 	return (
@@ -24,6 +25,9 @@ export const Userview = () => {
 						<ButtonRoomGenerator />
 					</Col>
 				</Row>
+			</div>
+			<div className="newplant mt-2 mb-2">
+				<ModalNewPlant />
 			</div>
 			<div className="mt-5 plants-panel">
 				<Col>
