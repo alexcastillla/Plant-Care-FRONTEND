@@ -26,23 +26,19 @@ export const Registermodal = () => {
 			</Button>
 
 			<Modal show={show} onHide={handleClose} animation={false}>
-				<Modal.Header closeButton>
-					<Modal.Title>
-						<p className="logocontainer">
-							<img src={logo2} className="logo2" />{" "}
-						</p>
-					</Modal.Title>
-				</Modal.Header>
-				<Modal.Body>
+				<Modal.Body className="body-form">
+					<p className="logocontainer mt-2 mb-2">
+						<img src={logo2} className="logo2" />{" "}
+					</p>
 					<p className={displayerror}>The {error} is invalid</p>
-					<div>
+					<div className="logo">
 						<i className="far fa-user-circle fa-5x" />
 					</div>
-					<div>
-						<input type="file" id="actual-btn" />
+					<div className="upload">
+						<input type="file" id="actual-btn" className="input-photo-send" />
 					</div>
 					<Form>
-						<Form.Group controlId="formBasicusername">
+						<Form.Group controlId="formBasicusername" className="form-inputs">
 							<Form.Label>Username</Form.Label>
 							<Form.Control className="user-text" onChange={e => setUsername(e.target.value)} />
 							<Form.Label>Email address</Form.Label>
@@ -57,8 +53,6 @@ export const Registermodal = () => {
 							<Form.Control className="location-text" onChange={e => setLocation(e.target.value)} />
 						</Form.Group>
 					</Form>
-				</Modal.Body>
-				<Modal.Footer>
 					<Button
 						className="Save-register btn-block"
 						type="submit"
@@ -83,7 +77,7 @@ export const Registermodal = () => {
 						}}>
 						Save Changes
 					</Button>
-				</Modal.Footer>
+				</Modal.Body>
 			</Modal>
 		</>
 	);
