@@ -19,6 +19,12 @@ $white: #ffff;
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
+.button-add-plant:hover{
+    background: $green-button-color
+}
+.button-add-plant:focus{
+    background: $green-button-color;
+}
 .modal-room{
     text-align: center;
     font-family: 'Roboto', sans-serif;
@@ -44,6 +50,12 @@ $white: #ffff;
     font-size: 1.2rem;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
+}
+.save-button:hover{
+    background: $coral-color;
+}
+.save-button:active{
+    background: $coral-color;
 }
 
 .Modal-Add-name-input{

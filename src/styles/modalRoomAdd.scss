@@ -28,7 +28,12 @@ $white: #ffff;
     border-radius: 50px;
     font-family: 'Roboto', sans-serif;
 }
-
+.save-button:hover{
+    background: $coral-color;
+}
+.save-button:focus{
+    background: $coral-color;
+}
 .Modal-Add-name-input{
     font-size: 1.2rem;
     font-weight: bold;
