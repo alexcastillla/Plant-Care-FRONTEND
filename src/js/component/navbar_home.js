@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import LogoNavbar from "../../img/logo_navbar.jpg";
 import "../../styles/navbar_home.scss";
+
 export const NavbarHome = () => {
 	return (
 		<nav className="navbar navbar-light mb">
