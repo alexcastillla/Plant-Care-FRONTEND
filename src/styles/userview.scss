@@ -5,10 +5,11 @@ $black-as-blue: #2c3e50;
 $white: #ffff;
 
 .room-panel{
+    margin-top: 4rem;
     border-bottom-right-radius: 100px;
     background: $green-color;
     height: 20vh;
-    margin-top: 0;
+    // margin-top: 0;
     overflow: hidden;
 }
 // .plants-panel{

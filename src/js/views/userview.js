@@ -11,7 +11,7 @@ import { ModalNewPlant } from "../component/addNewPlant";
 export const Userview = () => {
 	return (
 		<div>
-			<div className="mt-0 room-panel">
+			<div className="room-panel">
 				<Row>
 					<Col className="Add-column-room-name" sm={3}>
 						<p className="mt-2">Ubicaciones</p>

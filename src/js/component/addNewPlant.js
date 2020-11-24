@@ -17,7 +17,7 @@ export const ModalNewPlant = () => {
 	return (
 		<Fragment>
 			<Button className="button-add-plant" onClick={handleShow}>
-				Añade una nueva 🌺
+				Añade una nueva planta
 			</Button>
 			<Modal show={show} onHide={handleClose} className="form-room">
 				<Modal.Body className="modal-room">

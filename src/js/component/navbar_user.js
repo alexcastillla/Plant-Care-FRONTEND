@@ -5,7 +5,7 @@ import "../../styles/navbar_username.scss";
 
 export const NavbarUser = () => {
 	return (
-		<nav className="navbar navbar-light mb">
+		<nav className="navbar fixed-top navbar-light">
 			<Link to="/">
 				<img className="logo-navbar" src={LogoNavbar} />
 			</Link>
