@@ -14,3 +14,21 @@ $white: #ffff;
 ul {
     list-style-type: none;
 }
+
+.card-plant{
+    // display: flex;
+    flex-wrap: nowrap;
+}
+
+.card-img{
+    margin-top: 0.2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    // display: flex;
+    width: 10rem;
+}
+
+.temperature{
+    margin-top: 0.7rem;
+}

@@ -16,11 +16,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 							tipo_plant: "Exterior",
 							grow_phase: "Germinación",
 							sensor_number: "111",
-							humidity_max_ideal: 0.85,
-							humidity_min_ideal: 0.8,
+							humidity_max_ideal: 85,
+							humidity_min_ideal: 80,
 							temperature_max_ideal: 38,
 							temperature_min_ideal: 3,
-							humidity_sensor: 0.83,
+							humidity_sensor: 83,
 							temperature_sensor: 24
 						},
 						{
@@ -30,11 +30,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 							tipo_plant: "Interior",
 							grow_phase: "Crecimiento",
 							sensor_number: "112",
-							humidity_max_ideal: 0.7,
-							humidity_min_ideal: 0.6,
+							humidity_max_ideal: 70,
+							humidity_min_ideal: 60,
 							temperature_max_ideal: 24,
 							temperature_min_ideal: 10,
-							humidity_sensor: 0.5,
+							humidity_sensor: 50,
 							temperature_sensor: 22
 						}
 					]
@@ -50,11 +50,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 							tipo_plant: "Exterior",
 							grow_phase: "Maduración",
 							sensor_number: "113",
-							humidity_max_ideal: 0.5,
-							humidity_min_ideal: 0.2,
+							humidity_max_ideal: 50,
+							humidity_min_ideal: 20,
 							temperature_max_ideal: 38,
 							temperature_min_ideal: 3,
-							humidity_sensor: 0.83,
+							humidity_sensor: 83,
 							temperature_sensor: 24
 						}
 					]
