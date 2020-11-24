@@ -17,7 +17,7 @@ export const ModalNewPlant = () => {
 	return (
 		<Fragment>
 			<Button className="button-add-plant" onClick={handleShow}>
-				Add a new Plant 🌺
+				Añade una nueva 🌺
 			</Button>
 			<Modal show={show} onHide={handleClose} className="form-room">
 				<Modal.Body className="modal-room">
@@ -29,34 +29,46 @@ export const ModalNewPlant = () => {
 						}}
 						className="form-input-add-room">
 						<Form.Group controlId="formNameRoom">
-							<Form.Label className="Modal-Add-name-input">Plant Name</Form.Label>
+							<Form.Label className="Modal-Add-name-input">Nombre de la planta</Form.Label>
 							<Form.Control
 								className="inputPlant"
 								type="string"
-								onChange={e => setRoomName(e.target.value)}
+								onChange={e => setNewPlant(e.target.value)}
 							/>
-							<Form.Label className="Modal-Add-name-input mt-2">Room Name</Form.Label>
+							<Form.Label className="Modal-Add-name-input mt-2">Ubicación</Form.Label>
 							<Form.Control
 								className="inputPlant"
 								type="string"
-								onChange={e => setRoomName(e.target.value)}
+								onChange={e => setNewPlant(e.target.value)}
 							/>
-							<Form.Label className="Modal-Add-name-input mt-2">Type of Plants</Form.Label>
+							<Form.Label className="Modal-Add-name-input mt-2">Tipo de planta</Form.Label>
 							<Form.Control
 								className="inputPlant"
 								// type="string"
-								onChange={e => setRoomName(e.target.value)}
+								onChange={e => setNewPlant(e.target.value)}
 								as="select"
 								defaultValue="Choose...">
-								<option>Choose...</option>
+								<option>Elige...</option>
 								<option value="1">Exterior</option>
 								<option value="2">Interior</option>
 							</Form.Control>
-							<Form.Label className="Modal-Add-name-input mt-2">Sensor Name</Form.Label>
+							<Form.Label className="Modal-Add-name-input mt-2">Fase de crecimiento</Form.Label>
+							<Form.Control
+								className="inputPlant"
+								// type="string"
+								onChange={e => setNewPlant(e.target.value)}
+								as="select"
+								defaultValue="Choose...">
+								<option>Elige...</option>
+								<option value="1">Germinación</option>
+								<option value="2">Crecimiento</option>
+								<option value="3">Maduración</option>
+							</Form.Control>
+							<Form.Label className="Modal-Add-name-input mt-2">Número de sensor</Form.Label>
 							<Form.Control
 								className="inputPlant"
 								type="string"
-								onChange={e => setRoomName(e.target.value)}
+								onChange={e => setNewPlant(e.target.value)}
 							/>
 						</Form.Group>
 					</Form>
@@ -67,7 +79,7 @@ export const ModalNewPlant = () => {
 							handleClose();
 							actions.addRoom(roomName);
 						}}>
-						Save
+						Guardar
 					</Button>
 				</Modal.Body>
 			</Modal>

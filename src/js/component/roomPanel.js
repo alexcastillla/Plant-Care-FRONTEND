@@ -19,7 +19,6 @@ export const ModalRoomInputs = () => {
 			<i className="fas fa-plus-circle fa-2x" onClick={handleShow} />
 			<Modal show={show} onHide={handleClose} className="form-room">
 				<Modal.Body className="modal-room">
-					<Modal.Title>Add a new Room</Modal.Title>
 					<img className="room-logo-img" src={logoRoomAdd} />
 					<Form
 						onSubmit={e => {
@@ -27,7 +26,7 @@ export const ModalRoomInputs = () => {
 						}}
 						className="form-input-add-room">
 						<Form.Group controlId="formNameRoom">
-							<Form.Label className="Modal-Add-name-input">Room Name</Form.Label>
+							<Form.Label className="Modal-Add-name-input">Nombre de la ubicación</Form.Label>
 							<Form.Control
 								className="inputNameRoom"
 								type="string"
@@ -43,7 +42,7 @@ export const ModalRoomInputs = () => {
 							actions.addRoom(roomName);
 							actions.addRoomAPI(roomName);
 						}}>
-						Save
+						Guardar
 					</Button>
 				</Modal.Body>
 			</Modal>
