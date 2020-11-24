@@ -4,32 +4,60 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			currentUser: [],
-			plants: [
-				{
-					id: 1,
-					id_room: 1,
-					name_plant: "Rosalia",
-					tipo_plant: "Exterior",
-					grow_phase: "Germinación",
-					sensor_number: "111"
-				},
-				{
-					id: 2,
-					id_room: 2,
-					name_plant: "Pepa",
-					tipo_plant: "Interior",
-					grow_phase: "Crecimiento",
-					sensor_number: "112"
-				}
-			],
 			room: [
 				{
 					id: 1,
-					name_room: "Habitación"
+					name_room: "Habitación",
+					plants: [
+						{
+							id: 1,
+							id_room: 1,
+							name_plant: "Rosalia",
+							tipo_plant: "Exterior",
+							grow_phase: "Germinación",
+							sensor_number: "111",
+							humidity_max_ideal: 0.85,
+							humidity_min_ideal: 0.8,
+							temperature_max_ideal: 38,
+							temperature_min_ideal: 3,
+							humidity_sensor: 0.83,
+							temperature_sensor: 24
+						},
+						{
+							id: 2,
+							id_room: 1,
+							name_plant: "Pepa",
+							tipo_plant: "Interior",
+							grow_phase: "Crecimiento",
+							sensor_number: "112",
+							humidity_max_ideal: 0.7,
+							humidity_min_ideal: 0.6,
+							temperature_max_ideal: 24,
+							temperature_min_ideal: 10,
+							humidity_sensor: 0.5,
+							temperature_sensor: 22
+						}
+					]
 				},
 				{
 					id: 2,
-					name_room: "Terraza"
+					name_room: "Terraza",
+					plants: [
+						{
+							id: 3,
+							id_room: 2,
+							name_plant: "Lucia",
+							tipo_plant: "Exterior",
+							grow_phase: "Maduración",
+							sensor_number: "113",
+							humidity_max_ideal: 0.5,
+							humidity_min_ideal: 0.2,
+							temperature_max_ideal: 38,
+							temperature_min_ideal: 3,
+							humidity_sensor: 0.83,
+							temperature_sensor: 24
+						}
+					]
 				}
 			]
 		},
