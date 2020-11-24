@@ -11,10 +11,6 @@ $white: #ffff;
 
 }
 
-ul {
-    list-style-type: none;
-}
-
 .card-plant{
     // display: flex;
     flex-wrap: nowrap;
@@ -31,4 +27,21 @@ ul {
 
 .temperature{
     margin-top: 0.7rem;
+}
+
+.card{
+    margin-top: 0.7rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 25px;
+    // border: 0.5rem $black-as-blue;
+}
+
+.container-of-plants{
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+
+.direction-card{
+    display: flex;
 }

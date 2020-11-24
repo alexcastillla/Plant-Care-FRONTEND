@@ -14,33 +14,35 @@ export const RoomGeneratorPlants = () => {
 	useEffect(() => {
 		setListItem(
 			store.room.map((item, index) => {
-				console.log(store.room[index].plants[0].name_plant);
+				// console.log(store.room[index].plants[0].name_plant);
 				return (
 					<div className="" key={index}>
 						<p className="roomsName">{item.name_room}</p>
-						{store.room[index].plants.map((it, i) => {
-							return (
-								// <container >
-								<Card style={{ width: "16rem" }} className="card-plant" key={i}>
-									<Card.Img variant="top" src={Iconcard} className="card-img" />
-									<Card.Body>
-										<Card.Title>{it.name_plant}</Card.Title>
-										<Card.Text>Humedad:</Card.Text>
-										<ProgressBar animated variant="info" now={it.humidity_sensor} />
-										<Card.Text className="temperature">
-											Temperatura: {it.temperature_sensor}
-											°C
-										</Card.Text>
-									</Card.Body>
-								</Card>
-								// </container>
-							);
-						})}
+						<label className="direction-card">
+							{store.room[index].plants.map((it, i) => {
+								return (
+									// <container >
+									<Card style={{ width: "16rem" }} className="card-plant" key={i}>
+										<Card.Img variant="top" src={Iconcard} className="card-img" />
+										<Card.Body>
+											<Card.Title>{it.name_plant}</Card.Title>
+											<Card.Text>Humedad:</Card.Text>
+											<ProgressBar animated variant="info" now={it.humidity_sensor} />
+											<Card.Text className="temperature">
+												Temperatura: {it.temperature_sensor}
+												°C
+											</Card.Text>
+										</Card.Body>
+									</Card>
+									// </container>
+								);
+							})}
+						</label>
 					</div>
 				);
 			})
 		);
 	});
 
-	return <div>{listItem}</div>;
+	return <div className="container-of-plants">{listItem}</div>;
 };
