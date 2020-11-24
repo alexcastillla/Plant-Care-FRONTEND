@@ -21,7 +21,6 @@ export const RoomGeneratorPlants = () => {
 						<label className="direction-card">
 							{store.room[index].plants.map((it, i) => {
 								return (
-									// <container >
 									<Card style={{ width: "16rem" }} className="card-plant" key={i}>
 										<Card.Img variant="top" src={Iconcard} className="card-img" />
 										<Card.Body>
@@ -34,7 +33,6 @@ export const RoomGeneratorPlants = () => {
 											</Card.Text>
 										</Card.Body>
 									</Card>
-									// </container>
 								);
 							})}
 						</label>
