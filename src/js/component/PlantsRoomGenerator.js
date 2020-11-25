@@ -14,7 +14,6 @@ export const RoomGeneratorPlants = () => {
 	useEffect(() => {
 		setListItem(
 			store.room.map((item, index) => {
-				// console.log(store.room[index].plants[0].name_plant);
 				return (
 					<div className="" key={index}>
 						<p className="roomsName">{item.name_room}</p>
