@@ -1,0 +1,21 @@
+$green-color: #e3f8e8;
+$coral-color: #ff8785;
+$green-button-color: #009ba0;
+$black-as-blue: #2c3e50;
+$white: #ffff;
+
+.footer-container{
+    border-top: 2px solid $black-as-blue;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.footer-container p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    color: $black-as-blue;
+}
+.footer-container p:nth-child(2){
+    margin-top: -0.7rem;
+}
