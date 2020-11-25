@@ -1,0 +1,46 @@
+$green-color: #e3f8e8;
+$coral-color: #ff8785;
+$green-button-color: #009ba0;
+$black-as-blue: #2c3e50;
+$white: #ffff;
+
+.page_404 {
+    display: flex;
+    align-items: center; 
+    background: $white; 
+    font-family: 'Roboto', sans-serif;
+    margin-top: 5rem;
+    height: 70vh;
+    font-weight: bold;
+    color: $black-as-blue;
+    font-size: 2rem;
+}
+
+.page_404 img { 
+    width:100%;
+}
+
+.four_zero_four_bg {
+    background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+    height: 400px;
+    background-position: center;
+ }
+
+			 
+.link_404 {			 
+	color: #fff!important;
+    padding: 10px 20px;
+    background: $green-color;
+    margin: 20px 0;
+    display: inline-block;
+}
+
+.four_zero_four_bg{
+    font-size: 4rem;
+    font-family: 'Roboto', sans-serif;
+    color: $black-as-blue;
+}
+.contant_box_404{
+    font-family: 'Roboto', sans-serif;
+    color: $black-as-blue;
+}
