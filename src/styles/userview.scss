@@ -9,12 +9,8 @@ $white: #ffff;
     border-bottom-right-radius: 100px;
     background: $green-color;
     height: 20vh;
-    // margin-top: 0;
     overflow: hidden;
 }
-// .plants-panel{
-//     // height: 50vh;
-// }
 
 .add-button{
     border: none;
@@ -62,19 +58,6 @@ $white: #ffff;
     color: $black-as-blue;
     font-size: 2rem;
     font-weight: bold;
-}
-
-.span-room-name{
-    border: solid $green-button-color;
-    font-weight: bold;
-    font-size: 1.4rem;
-    padding: 0 1rem 0.4rem 1rem;
-    color: $white;
-    margin-left: 0.5rem;
-    border-radius: 0.5rem;
-    background: $green-button-color;
-    height: 100%;
-    text-align: center;
 }
 
 .modal-dialog {

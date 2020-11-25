@@ -7,6 +7,7 @@ import { Demo } from "./views/demo";
 import { Error } from "./views/error";
 import { Single } from "./views/single";
 import { Userview } from "./views/userview";
+import { PlantView } from "./views/plantView";
 
 import injectContext from "./store/appContext";
 
@@ -33,6 +34,10 @@ const Layout = () => {
 							<NavbarUser />
 							<Userview />
 							{/* <Demo /> */}
+						</Route>
+						<Route exact path="/username/view/plant">
+							<NavbarUser />
+							<PlantView />
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />

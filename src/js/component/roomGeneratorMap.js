@@ -1,5 +1,6 @@
 import React, { Component, useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
+import "../../styles/modalRoomAdd.scss";
 import { Link } from "react-router-dom";
 
 export const ButtonRoomGenerator = () => {

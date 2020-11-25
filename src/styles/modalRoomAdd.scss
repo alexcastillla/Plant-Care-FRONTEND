@@ -44,3 +44,16 @@ $white: #ffff;
     padding-left: 3rem;
     padding-right: 3rem;
 }
+
+.span-room-name{
+    border: solid $green-button-color;
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding: 0 1rem 0.4rem 1rem;
+    color: $white;
+    margin-left: 0.5rem;
+    border-radius: 0.5rem;
+    background: $green-button-color;
+    height: 100%;
+    text-align: center;
+}
