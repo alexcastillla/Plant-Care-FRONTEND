@@ -9,7 +9,11 @@ import Form from "react-bootstrap/Form";
 export const ModalNewPlant = () => {
 	const [show, setShow] = useState(false);
 	const { store, actions } = useContext(Context);
-	const [newPlant, setNewPlant] = useState("");
+	const [namePlant, setNamePlant] = useState("");
+	const [locationPlant, setLocationPlant] = useState("");
+	const [tipoPlant, setTipoPlant] = useState("");
+	const [growPlant, setGrowPlant] = useState("");
+	const [sensorPlant, setSensorPlant] = useState("");
 
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
@@ -21,7 +25,6 @@ export const ModalNewPlant = () => {
 			</Button>
 			<Modal show={show} onHide={handleClose} className="form-room">
 				<Modal.Body className="modal-room">
-					{/* <Modal.Title>Add a new</Modal.Title> */}
 					<img className="plant-logo-img" src={addplantlogo} />
 					<Form
 						onSubmit={e => {
@@ -33,19 +36,18 @@ export const ModalNewPlant = () => {
 							<Form.Control
 								className="inputPlant"
 								type="string"
-								onChange={e => setNewPlant(e.target.value)}
+								onChange={e => setNamePlant(e.target.value)}
 							/>
 							<Form.Label className="Modal-Add-name-input mt-2">Ubicación</Form.Label>
 							<Form.Control
 								className="inputPlant"
 								type="string"
-								onChange={e => setNewPlant(e.target.value)}
+								onChange={e => setLocationPlant(e.target.value)}
 							/>
 							<Form.Label className="Modal-Add-name-input mt-2">Tipo de planta</Form.Label>
 							<Form.Control
 								className="inputPlant"
-								// type="string"
-								onChange={e => setNewPlant(e.target.value)}
+								onChange={e => setTipoPlant(e.target.value)}
 								as="select"
 								defaultValue="Choose...">
 								<option>Elige...</option>
@@ -56,7 +58,7 @@ export const ModalNewPlant = () => {
 							<Form.Control
 								className="inputPlant"
 								// type="string"
-								onChange={e => setNewPlant(e.target.value)}
+								onChange={e => setGrowPlant(e.target.value)}
 								as="select"
 								defaultValue="Choose...">
 								<option>Elige...</option>
@@ -68,7 +70,7 @@ export const ModalNewPlant = () => {
 							<Form.Control
 								className="inputPlant"
 								type="string"
-								onChange={e => setNewPlant(e.target.value)}
+								onChange={e => setSensorPlant(e.target.value)}
 							/>
 						</Form.Group>
 					</Form>
@@ -77,7 +79,7 @@ export const ModalNewPlant = () => {
 						type="submit"
 						onClick={() => {
 							handleClose();
-							actions.addRoom(roomName);
+							actions.addPlant(namePlant, locationPlant, tipoPlant, growPlant, sensorPlant);
 						}}>
 						Guardar
 					</Button>
