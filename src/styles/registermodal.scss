@@ -6,17 +6,18 @@ $white: #ffff;
 
 
 .Save-register{
-    border-radius: 50px;
+    border-radius: 3.125rem;
     background-color: $green-color;
     font-size: 1.2rem;
     border:none;
     color:$black-as-blue;
     font-weight: bold;
+    margin-bottom: 8rem;
+    margin-top: 3rem;
     
 }
 .save-register:active{
-    // background-color: $coral-color;
-    border-radius: 50px;
+    border-radius: 3.125rem;
     border: none;
     background-color: $green-color;
 }
@@ -27,16 +28,11 @@ $white: #ffff;
     font-family: 'Roboto', sans-serif;
 }
 
-// .join-button-home{
-//     border-radius: 50px;
-//     background-color: $coral-color;
-//     border: none;
-// }
 .join-button-home{
     background-color: $green-color;
-    width: 350px;
+    width:  20rem;
     border: none;
-    border-radius: 50px;
+    border-radius: 3.125rem;
     color: $black-as-blue;
     font-weight: bold;
     font-size: 1.2rem;
@@ -50,14 +46,15 @@ $white: #ffff;
 }
 .join-button-home:active{
     // background-color: $coral-color;
-    border-radius: 50px;
+    border-radius: 3.125rem;
     border: none;
     background-color: $green-color;
 }
 
 .form-group{
     text-align: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 1.2rem;
@@ -65,8 +62,9 @@ $white: #ffff;
 }
 
 .user-text{
-    border-radius: 50px;
+    border-radius: 3.125rem;
     margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 1.2rem;
@@ -74,8 +72,9 @@ $white: #ffff;
 }
 
 .email{
-    border-radius: 50px;
+    border-radius: 3.125rem;
     margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 1.2rem;
@@ -84,6 +83,7 @@ $white: #ffff;
 .psswd{
     border-radius: 50px;
     margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 1.2rem;
@@ -92,17 +92,21 @@ $white: #ffff;
 .location-text{
     border-radius: 50px;
     margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 1.2rem;
 }
 
 .modal-dialog {
-    max-width: 30rem;
+    max-width: 18rem;
 }
 .modal-content{
     border-radius: 25px;
     border: 0.5rem $black-as-blue;
+    width: 24rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 .Errormesage{
     display: none;
@@ -133,31 +137,9 @@ $white: #ffff;
     width: 100%;
 }
 
-.profilephoto{
-    width: 8rem;
-    border-radius: 0.5rem;
-}
-.upload{
-    color: white;
-    padding: 0.5rem;
-    font-family: sans-serif;
-    border-radius: 0.3rem;
-    margin-top: 1rem;
-    
-}
-
 .logo{
     display: flex;
     justify-content: center;
-}
-.upload{
-    display: flex;
-    justify-content: center;
-}
-.input-photo-send{
-    border: solid $black-as-blue;
-    color: $black-as-blue;
-    font-family: 'Roboto', sans-serif;
 }
 
 .body-form{
