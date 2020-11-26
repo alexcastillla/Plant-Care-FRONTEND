@@ -31,12 +31,6 @@ export const Registermodal = () => {
 						<img src={logo2} className="logo2" />{" "}
 					</p>
 					<p className={displayerror}>The {error} is invalid</p>
-					<div className="logo">
-						<i className="far fa-user-circle fa-5x" />
-					</div>
-					<div className="upload">
-						<input type="file" id="actual-btn" className="input-photo-send" />
-					</div>
 					<Form>
 						<Form.Group controlId="formBasicusername" className="form-inputs">
 							<Form.Label>Username</Form.Label>
