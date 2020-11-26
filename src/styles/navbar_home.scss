@@ -6,7 +6,10 @@ $white: #ffff;
 
 .navbar{
     height: 7vh;
-    background-color: $white;
+    // background-color: $white;
+    // position: fixed;
+    width: 100%;
+    background-color: transparent !important;
 }
 .logo-navbar{
     height: 2.8rem;
