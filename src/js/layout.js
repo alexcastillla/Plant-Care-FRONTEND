@@ -5,7 +5,7 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Error } from "./views/error";
-import { Single } from "./views/single";
+import { PlantsInfo } from "./views/single";
 import { Userview } from "./views/userview";
 import { PlantView } from "./views/plantView";
 
@@ -39,8 +39,9 @@ const Layout = () => {
 							<NavbarUser />
 							<PlantView />
 						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
+						<Route exact path="/username/:roomId/:plantId">
+							<NavbarUser />
+							<PlantsInfo />
 						</Route>
 						<Route>
 							<NavbarUser />

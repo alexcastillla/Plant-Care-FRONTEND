@@ -6,6 +6,7 @@ import Iconcard from "../../img/icon_card_plant.png";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import "../../styles/PlantsRoomGenerator.scss";
+import { Button } from "react-bootstrap/Button";
 
 export const RoomGeneratorPlants = () => {
 	const { store, actions } = useContext(Context);
@@ -31,6 +32,13 @@ export const RoomGeneratorPlants = () => {
 												°C
 											</Card.Text>
 										</Card.Body>
+										<Card.Footer>
+											<Link to={`/username/${item.name_room}/${it.name_plant}`}>
+												<button type="button" className="btn btn-primary">
+													More Info
+												</button>
+											</Link>
+										</Card.Footer>
 									</Card>
 								);
 							})}
