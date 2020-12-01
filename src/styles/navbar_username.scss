@@ -3,6 +3,7 @@ $coral-color: #ff8785;
 $green-button-color: #009ba0;
 $black-as-blue: #2c3e50;
 $white: #ffff;
+$font: 'Roboto', sans-serif;
 
 .navbar{
     height: 7vh;
@@ -19,10 +20,10 @@ $white: #ffff;
     font-size: 1.4rem;
     padding: 0 1rem 0.4rem 1rem;
     color: $black-as-blue;
-    border-radius: 50px;
+    border-radius: 3.125rem;
     background: $green-color;
     height: 100%;
     width: 10rem;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: $font;
 }
