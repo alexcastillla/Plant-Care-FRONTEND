@@ -3,12 +3,13 @@ $coral-color: #ff8785;
 $green-button-color: #009ba0;
 $black-as-blue: #2c3e50;
 $white: #ffff;
+$font: 'Roboto', sans-serif;
 
 .page_404 {
     display: flex;
     align-items: center; 
     background: $white; 
-    font-family: 'Roboto', sans-serif;
+    font-family: $font;
     margin-top: 5rem;
     height: 70vh;
     font-weight: bold;
@@ -22,25 +23,25 @@ $white: #ffff;
 
 .four_zero_four_bg {
     background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
-    height: 400px;
+    height: 25rem;
     background-position: center;
  }
 
 			 
 .link_404 {			 
-	color: #fff!important;
-    padding: 10px 20px;
+	color: #fff;
+    padding: 0.625rem 1.25rem;
     background: $green-color;
-    margin: 20px 0;
+    margin: 1.25rem 0;
     display: inline-block;
 }
 
 .four_zero_four_bg{
     font-size: 4rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: $font;
     color: $black-as-blue;
 }
 .contant_box_404{
-    font-family: 'Roboto', sans-serif;
+    font-family: $font;
     color: $black-as-blue;
 }
