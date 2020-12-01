@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 export const ButtonRoomGenerator = () => {
 	const { store, actions } = useContext(Context);
-	console.log(store.room, "im the local store");
 	const [listItem, setListItem] = useState("");
 
 	useEffect(() => {

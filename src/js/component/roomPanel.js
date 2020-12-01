@@ -7,10 +7,9 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 
 export const ModalRoomInputs = () => {
-	const [show, setShow] = useState(false);
 	const { store, actions } = useContext(Context);
-	const [roomName, setRoomName] = useState("");
-
+	const [nameRoom, setNameRoom] = useState("");
+	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
 
@@ -26,11 +25,11 @@ export const ModalRoomInputs = () => {
 						}}
 						className="form-input-add-room">
 						<Form.Group controlId="formNameRoom">
-							<Form.Label className="Modal-Add-name-input">Nombre de la ubicación</Form.Label>
+							<Form.Label className="modal-add-name-input">Nombre de la ubicación</Form.Label>
 							<Form.Control
 								className="inputNameRoom"
 								type="string"
-								onChange={e => setRoomName(e.target.value)}
+								onChange={e => setNameRoom(e.target.value)}
 							/>
 						</Form.Group>
 					</Form>
@@ -39,8 +38,7 @@ export const ModalRoomInputs = () => {
 						type="submit"
 						onClick={() => {
 							handleClose();
-							actions.addRoom(roomName);
-							actions.addRoomAPI(roomName);
+							actions.createRoom(nameRoom);
 						}}>
 						Guardar
 					</Button>
