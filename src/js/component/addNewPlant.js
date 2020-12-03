@@ -7,7 +7,6 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 
 export const ModalNewPlant = () => {
-	const [show, setShow] = useState(false);
 	const { store, actions } = useContext(Context);
 	const [namePlant, setNamePlant] = useState("");
 	const [locationPlant, setLocationPlant] = useState("");
@@ -15,6 +14,7 @@ export const ModalNewPlant = () => {
 	const [growPlant, setGrowPlant] = useState("");
 	const [sensorPlant, setSensorPlant] = useState("");
 
+	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
 
@@ -51,8 +51,9 @@ export const ModalNewPlant = () => {
 								as="select"
 								defaultValue="Choose...">
 								<option>Elige...</option>
-								<option value="1">Exterior</option>
-								<option value="2">Interior</option>
+								{store.grows.map((grow, index) => {
+									return <option key={index}>{grow.label}</option>;
+								})}
 							</Form.Control>
 							<Form.Label className="Modal-Add-name-input mt-2">Fase de crecimiento</Form.Label>
 							<Form.Control

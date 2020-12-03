@@ -5,6 +5,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			currentUser: [],
 			plantas: [],
+			grows: [
+				{
+					label: "pepe"
+				},
+				{
+					label: "juan"
+				}
+			],
 			room: [
 				{
 					id: 1,
