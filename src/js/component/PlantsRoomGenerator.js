@@ -33,7 +33,7 @@ export const RoomGeneratorPlants = () => {
 											</Card.Text>
 										</Card.Body>
 										<Card.Footer>
-											<Link to={`/username/${item.name_room}/${it.name_plant}`}>
+											<Link to={`/username/${it.name_plant}`}>
 												<button type="button" className="btn btn-primary">
 													More Info
 												</button>

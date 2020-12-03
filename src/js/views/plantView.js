@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext, Fragment, useParams } from "react";
 import { Context } from "../store/appContext";
+import PropTypes from "prop-types";
 import "../../styles/plantView.scss";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -10,8 +11,9 @@ import Chart from "chart.js";
 
 export const PlantView = () => {
 	const { store, actions } = useContext(Context);
-	// const params = useParams();
-	// console.log(params);
+	let { plantName } = useParams();
+
+	// let plant = store.plantDetail.find(plant => plant.name === String(plantName));
 
 	useEffect(() => {
 		var ctx = document.getElementById("myChart");
