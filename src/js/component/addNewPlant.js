@@ -49,21 +49,26 @@ export const ModalNewPlant = () => {
 								className="inputPlant"
 								onChange={e => setTipoPlant(e.target.value)}
 								as="select"
-								defaultValue="Choose...">
+								defaultValue="Elige...">
 								<option>Elige...</option>
-								<option value="1">Exterior</option>
-								<option value="2">Interior</option>
+								{store.grows.map((grow, index) => {
+                                    return (
+                                        <option key={index}>{grow.name_grow_phase}</option>);}
+                                    )
+                                }
 							</Form.Control>
 							<Form.Label className="Modal-Add-name-input mt-2">Fase de crecimiento</Form.Label>
 							<Form.Control
 								className="inputPlant"
 								onChange={e => setGrowPlant(e.target.value)}
 								as="select"
-								defaultValue="Choose...">
+								defaultValue="Elige...">
 								<option>Elige...</option>
-								<option value="1">Germinación</option>
-								<option value="2">Crecimiento</option>
-								<option value="3">Maduración</option>
+								{store.types.map((type, index) => {
+                                    return (
+                                        <option key={index}>{type.name_type}</option>);}
+                                    )
+                                }
 							</Form.Control>
 							<Form.Label className="Modal-Add-name-input mt-2">Número de sensor</Form.Label>
 							<Form.Control
