@@ -7,14 +7,14 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 
 export const ModalNewPlant = () => {
-	const [show, setShow] = useState(false);
-	const { store, actions } = useContext(Context);
+    const { store, actions } = useContext(Context);
 	const [namePlant, setNamePlant] = useState("");
 	const [locationPlant, setLocationPlant] = useState("");
-	const [tipoPlant, setTipoPlant] = useState("");
+	const [typePlant, setTypePlant] = useState("");
 	const [growPlant, setGrowPlant] = useState("");
 	const [sensorPlant, setSensorPlant] = useState("");
-
+    
+	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
 
@@ -32,7 +32,7 @@ export const ModalNewPlant = () => {
 						}}
 						className="form-input-add-room">
 						<Form.Group controlId="formNameRoom">
-							<Form.Label className="Modal-Add-name-input">Nombre de la planta</Form.Label>
+							<Form.Label className="modal-Add-name-input">Nombre de la planta</Form.Label>
 							<Form.Control
 								className="inputPlant"
 								type="string"
@@ -57,7 +57,6 @@ export const ModalNewPlant = () => {
 							<Form.Label className="Modal-Add-name-input mt-2">Fase de crecimiento</Form.Label>
 							<Form.Control
 								className="inputPlant"
-								// type="string"
 								onChange={e => setGrowPlant(e.target.value)}
 								as="select"
 								defaultValue="Choose...">
@@ -79,7 +78,7 @@ export const ModalNewPlant = () => {
 						type="submit"
 						onClick={() => {
 							handleClose();
-							actions.addPlant(namePlant, locationPlant, tipoPlant, growPlant, sensorPlant);
+							actions.createPlant(namePlant, locationPlant, typePlant, growPlant, sensorPlant);
 						}}>
 						Guardar
 					</Button>
