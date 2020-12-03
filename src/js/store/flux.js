@@ -4,6 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			currentUser: [],
+			plantas: [],
 			room: [
 				{
 					id: 1,
@@ -62,6 +63,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
+			addPlant: plant => {
+				getStore().plantas.push(plant);
+				// const array = getStore().room;
+				// setStore([...array], array.push(roomName));
+			},
 			addRoom: roomName => {
 				console.log(roomName, "juan prueba");
 				getStore().room.push({ name_room: roomName, plants: [] });

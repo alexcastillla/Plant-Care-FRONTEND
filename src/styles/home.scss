@@ -1,9 +1,15 @@
-.home{
-    background: url("../img/background.png");
-    // height: 4500px;
-    max-width: 100%;
-    height: 4000px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+@media only screen and (min-width: 1200px) {
+    .home{
+        background: url("../img/background.png");
+        // height: 4500px;
+        // max-width: 100%;
+        height: 4700px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .home-part-1{
+        border: solid red 2px;
+        width: 800px;
+    }
 }
