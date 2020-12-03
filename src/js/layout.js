@@ -41,7 +41,8 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/username/:roomId/:plantId">
 							<NavbarUser />
-							<PlantsInfo />
+							{/* <PlantsInfo /> */}
+							<PlantView />
 						</Route>
 						<Route>
 							<NavbarUser />
