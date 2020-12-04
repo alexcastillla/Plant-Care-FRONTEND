@@ -3,16 +3,16 @@ $coral-color: #ff8785;
 $green-button-color: #009ba0;
 $black-as-blue: #2c3e50;
 $white: #ffff;
-$Roboto: 'Roboto', sans-serif;
+$font: 'Roboto', sans-serif;
 
 .footer-container{
-    border-top: 2px solid $black-as-blue;
+    border-top: 0.125rem solid $black-as-blue;
     margin-left: 4rem;
     margin-right: 4rem;
 }
 
 .footer-container p{
-    font-family: $Roboto;
+    font-family: $font;
     font-weight: bolder;
     font-size: 1.1rem;
     color: $black-as-blue;

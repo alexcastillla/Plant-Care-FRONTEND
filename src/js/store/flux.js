@@ -100,6 +100,43 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.log("Error status: ", error);
 					});
 			},
+			createRoom: nameRoom => {
+				fetch(url.concat("/user/", getStore().currentUser, "/rooms"), {
+					method: "POST",
+					headers: { "Content-type": "application/json" },
+					body: JSON.stringify({
+						name_room: nameRoom
+					})
+				})
+					.then(response => {
+						if (!response.ok) {
+							throw new Error(response.status);
+						}
+						return response.json();
+					})
+					.then(() => {
+						getActions().getRoom();
+					})
+					.catch(error => {
+						console.log("Creating contact, error status: ", error);
+					});
+			},
+
+			getRoom: () => {
+				fetch(url.concat("/user/", getStore().currentUser, "/rooms"))
+					.then(response => {
+						if (!response.ok) {
+							throw new Error(response.status);
+						}
+						return response.json();
+					})
+					.then(json => {
+						setStore({ room: result });
+					})
+					.catch(error => {
+						console.log("Error status: ", error);
+					});
+			},
 
 			createPlant: (namePlant, locationPlant, typePlant, growPlant, sensorPlant) => {
 				fetch(url.concat("/user/", getStore().currentUser, "/rooms/", locationPlant, "/plants"), {
