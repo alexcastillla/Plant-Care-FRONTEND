@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useContext, Fragment, useParams } from "react";
+import React, { useState, useEffect, useContext, Fragment } from "react";
+import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import PropTypes from "prop-types";
 import "../../styles/plantView.scss";
@@ -14,6 +15,7 @@ export const PlantView = () => {
 	let { plantName } = useParams();
 
 	// let plant = store.plantDetail.find(plant => plant.name === String(plantName));
+	useEffect(() => {});
 
 	useEffect(() => {
 		var ctx = document.getElementById("myChart");

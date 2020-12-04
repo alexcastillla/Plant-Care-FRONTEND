@@ -1,18 +1,12 @@
-const url = "";
+const url = "https://plant-and-care.herokuapp.com";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			currentUser: [],
+			currentUser: null,
 			plantas: [],
-			grows: [
-				{
-					label: "pepe"
-				},
-				{
-					label: "juan"
-				}
-			],
+			types: [],
+			grows: [],
 			room: [
 				{
 					id: 1,
@@ -71,58 +65,66 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
-			addPlant: plant => {
-				getStore().plantas.push(plant);
-				// const array = getStore().room;
-				// setStore([...array], array.push(roomName));
+			getTypesOptions: () => {
+				fetch(url.concat("/types"))
+					.then(response => {
+						if (!response.ok) {
+							throw new Error(response.status);
+						}
+						return response.json();
+					})
+					.then(respAsJson => {
+						respAsJson.map(type => {
+							setStore(types => [...types, type]);
+						});
+					})
+					.catch(error => {
+						console.log("Error status: ", error);
+					});
 			},
-			addRoom: roomName => {
-				console.log(roomName, "juan prueba");
-				getStore().room.push({ name_room: roomName, plants: [] });
-				// const array = getStore().room;
-				// setStore([...array], array.push(roomName));
+
+			getGrowOptions: () => {
+				fetch(url.concat("/grows"))
+					.then(response => {
+						if (!response.ok) {
+							throw new Error(response.status);
+						}
+						return response.json();
+					})
+					.then(respAsJson => {
+						respAsJson.map(grow => {
+							setStore(grows => [...grows, grow]);
+						});
+					})
+					.catch(error => {
+						console.log("Error status: ", error);
+					});
 			},
-			addRoomAPI: roomName => {
-				fetch(url + "/new-room", {
+
+			createPlant: (namePlant, locationPlant, typePlant, growPlant, sensorPlant) => {
+				fetch(url.concat("/user/", getStore().currentUser, "/rooms/", locationPlant, "/plants"), {
 					method: "POST",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
-						name_room: rommName,
-						username: getStore().currentUser.id
+						id_room: locationPlant,
+						name_plant: namePlant,
+						type_plant: typePlant,
+						grow_phase: growPlant,
+						sensor_number: sensorPlant
 					})
-				}).then(() => {
-					getActions().getRoom();
-				});
-			},
-			getRoomAPI: () => {
-				fetch(url + "username/new-room")
-					.then(res => res.json())
-					.then(result => {
-						console.log("getting room", result), setStore({ room: result });
+				})
+					.then(response => {
+						if (!response.ok) {
+							throw new Error(response.status);
+						}
+						return response.json();
+					})
+					.then(() => {
+						getActions().getPlant();
+					})
+					.catch(error => {
+						console.log("Creating plant, error status: ", error);
 					});
-			},
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
-			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
-			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
-
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-
-				//reset the global store
-				setStore({ demo: demo });
 			}
 		}
 	};
