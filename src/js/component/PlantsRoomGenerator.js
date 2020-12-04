@@ -31,14 +31,12 @@ export const RoomGeneratorPlants = () => {
 												Temperatura: {it.temperature_sensor}
 												°C
 											</Card.Text>
-										</Card.Body>
-										<Card.Footer>
 											<Link to={`/username/${it.name_plant}`}>
 												<button type="button" className="btn btn-primary">
 													More Info
 												</button>
 											</Link>
-										</Card.Footer>
+										</Card.Body>
 									</Card>
 								);
 							})}
