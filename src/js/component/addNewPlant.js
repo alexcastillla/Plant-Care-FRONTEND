@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext, Fragment } from "react";
 import { Context } from "../store/appContext";
-import "../../styles/modaPlantAdd.scss";
+import "../../styles/modalPlantAdd.scss";
 import addplantlogo from "../../img/addplantlogo.png";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
@@ -38,13 +38,13 @@ export const ModalNewPlant = () => {
 								type="string"
 								onChange={e => setNamePlant(e.target.value)}
 							/>
-							<Form.Label className="Modal-Add-name-input mt-2">Ubicación</Form.Label>
+							<Form.Label className="modal-Add-name-input mt-2">Ubicación</Form.Label>
 							<Form.Control
 								className="inputPlant"
 								type="string"
 								onChange={e => setLocationPlant(e.target.value)}
 							/>
-							<Form.Label className="Modal-Add-name-input mt-2">Tipo de planta</Form.Label>
+							<Form.Label className="modal-Add-name-input mt-2">Tipo de planta</Form.Label>
 							<Form.Control
 								className="inputPlant"
 								onChange={e => setTipoPlant(e.target.value)}
@@ -55,7 +55,7 @@ export const ModalNewPlant = () => {
 									return <option key={index}>{grow.name_grow_phase}</option>;
 								})}
 							</Form.Control>
-							<Form.Label className="Modal-Add-name-input mt-2">Fase de crecimiento</Form.Label>
+							<Form.Label className="modal-Add-name-input mt-2">Fase de crecimiento</Form.Label>
 							<Form.Control
 								className="inputPlant"
 								onChange={e => setGrowPlant(e.target.value)}
@@ -66,7 +66,7 @@ export const ModalNewPlant = () => {
 									return <option key={index}>{type.name_type}</option>;
 								})}
 							</Form.Control>
-							<Form.Label className="Modal-Add-name-input mt-2">Número de sensor</Form.Label>
+							<Form.Label className="modal-Add-name-input mt-2">Número de sensor</Form.Label>
 							<Form.Control
 								className="inputPlant"
 								type="string"

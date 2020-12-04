@@ -14,7 +14,7 @@ export const Userview = () => {
 			<div className="room-panel">
 				<Row>
 					<Col className="Add-column-room-name" sm={3}>
-						<p className="mt-2">Ubicaciones</p>
+						<p>Ubicaciones</p>
 					</Col>
 				</Row>
 				<Row className="mt-0">
