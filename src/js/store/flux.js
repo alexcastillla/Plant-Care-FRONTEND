@@ -1,4 +1,4 @@
-const url = "";
+const url = "https://3000-c35f3c39-29f5-45d6-b42d-c4a74a23f4ec.ws-eu03.gitpod.io/";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
@@ -41,30 +41,33 @@ const getState = ({ getStore, getActions, setStore }) => {
 						location: location
 					})
 				});
+			},
+
+			login: async (email, password) => {
+				let loginurl = url.concat("login");
+				var myHeaders = new Headers();
+				myHeaders.append("Authorization", "Basic ZW1haWxAaG90bWFpbC5jb20xMjM6MTIzNDU2NzQ=");
+				myHeaders.append("Content-Type", "application/json");
+
+				var raw = JSON.stringify({ email: email, password: password });
+
+				var requestOptions = {
+					method: "POST",
+					headers: myHeaders,
+					body: raw,
+					redirect: "follow"
+				};
+				console.log("working");
+				try {
+					let res = await fetch(loginurl, requestOptions);
+					let result = await res.json();
+					let active = await setStore({});
+					let token = await result;
+					setStore({ token: token[0].token });
+				} catch (error) {
+					console.log("error", error);
+				}
 			}
-
-			// // Use getActions to call a function within a fuction
-			// exampleFunction: () => {
-			//     getActions().changeColor(0, "green");
-			// },
-			// loadSomeData: () => {
-			//     /**
-			//                     fetch().then().then(data => setStore({ "foo": data.bar }))
-			//                 */
-			// },
-			// changeColor: (index, color) => {
-			//     //get the store
-			//     const store = getStore();
-
-			//     //we have to loop the entire demo array to look for the respective index
-			//     //and change its color
-			//     const demo = store.demo.map((elm, i) => {
-			//         if (i === index) elm.background = color;
-			//         return elm;
-			//     });
-
-			//     // //reset the global store
-			//     // setStore({ demo: demo });
 		}
 	};
 };

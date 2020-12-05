@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
+import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import logo2 from "../../img/logo2.jpg";
 import LogoNavbar from "../../img/logo_navbar.jpg";
@@ -8,11 +9,14 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 export const NavbarHome = () => {
+	const { store, actions } = useContext(Context);
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
 	const [error, setError] = useState("");
 	const [displayerror, setDisplayerror] = useState("Errormesage");
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
 
 	return (
 		<nav className="navbar navbar-light mb">
@@ -53,7 +57,7 @@ export const NavbarHome = () => {
 									setDisplayerror("Errormesageshow");
 								} else {
 									// actions.add_new_user(username, email, password, location);
-									setDisplayerror("Errormesage");
+									actions.login(email, password);
 								}
 							}}>
 							Send
