@@ -8,16 +8,13 @@ import logo2 from "../../img/logo2.jpg";
 import profilephoto from "../../img/profilephoto.jpg";
 
 export const Registermodal = () => {
-	const [show, setShow] = useState(false);
+    const { store, actions } = useContext(Context);
+    const [user, setUser] = useState({username="", email="", password="", location=""});
+	const [error, setError] = useState("");
+    const [displayerror, setDisplayerror] = useState("Errormesage");
+    const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
-	const { store, actions } = useContext(Context);
-	const [username, setUsername] = useState("");
-	const [email, setEmail] = useState("");
-	const [password, setPassword] = useState("");
-	const [location, setLocation] = useState("");
-	const [error, setError] = useState("");
-	const [displayerror, setDisplayerror] = useState("Errormesage");
 
 	return (
 		<>
