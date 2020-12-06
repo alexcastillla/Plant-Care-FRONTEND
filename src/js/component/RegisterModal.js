@@ -9,7 +9,7 @@ import profilephoto from "../../img/profilephoto.jpg";
 
 export const Registermodal = () => {
     const { store, actions } = useContext(Context);
-    const [user, setUser] = useState({username="", email="", password="", location=""});
+    const [user, setUser] = useState({username:"", email:"", password:"", location:""});
 	const [error, setError] = useState("");
     const [displayerror, setDisplayerror] = useState("Errormesage");
     const [show, setShow] = useState(false);

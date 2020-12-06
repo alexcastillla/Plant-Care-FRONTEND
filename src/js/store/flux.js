@@ -31,7 +31,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			addUser: (username, email, password, location) => {
-				fetch(url + "create-account/", {
+				fetch(url.concat("/register"), {
 					method: "POST",
 					headers: { "Content-type": "application/json/user" },
 					body: JSON.stringify({
