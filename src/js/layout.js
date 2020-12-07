@@ -13,6 +13,7 @@ import injectContext from "./store/appContext";
 import { NavbarUser } from "./component/navbar_user.jsx";
 import { NavbarHome } from "./component/navbar_home.jsx";
 import { Footer } from "./component/footer.jsx";
+import { Profile } from "./component/userprofile.js";
 
 //create your first component
 const Layout = () => {
@@ -28,6 +29,7 @@ const Layout = () => {
 						<Route exact path="/">
 							<NavbarHome />
 							<Home />
+							<Profile />
 						</Route>
 						<Route exact path="/username/view">
 							<NavbarUser />
