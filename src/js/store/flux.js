@@ -1,4 +1,4 @@
-const url = "https://3000-c35f3c39-29f5-45d6-b42d-c4a74a23f4ec.ws-eu03.gitpod.io/";
+const url = "https://3000-b06ba97d-2099-4d04-989d-17e1c653e800.ws-eu03.gitpod.io/";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
@@ -57,11 +57,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 					body: raw,
 					redirect: "follow"
 				};
-				console.log("working");
+
 				try {
+					console.log("working");
 					let res = await fetch(loginurl, requestOptions);
 					let result = await res.json();
-					let active = await setStore({});
 					let token = await result;
 					setStore({ token: token[0].token });
 				} catch (error) {

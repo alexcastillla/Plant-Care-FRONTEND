@@ -6,7 +6,7 @@ $white: #ffff;
 
 
 .Save-register{
-    border-radius: 60px;
+    border-radius: 3.75rem;
     background-color: $green-color;
     font-size: 1.2rem;
     border:none;
@@ -23,7 +23,7 @@ $white: #ffff;
 }
 .save-register:active{
     // background-color: $coral-color;
-    border-radius: 60px;
+    border-radius: 3.75rem;
     border: none;
     background-color: $green-color;
 }
@@ -38,7 +38,7 @@ $white: #ffff;
     width: 20rem;
     height: 3rem;
     border: none;
-    border-radius: 60px;
+    border-radius: 3.75rem;
     color: $black-as-blue;
     font-weight: bold;
     font-size: 1.2rem;
@@ -52,7 +52,7 @@ $white: #ffff;
 }
 .join-button-home:active{
     // background-color: $coral-color;
-    border-radius: 60px;
+    border-radius: 3.75rem;
     border: none;
     background-color: $green-color;
 }
@@ -66,7 +66,7 @@ $white: #ffff;
 }
 
 .user-text{
-    border-radius: 60px;
+    border-radius: 3.75rem;
     margin-bottom: 0.5rem;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
@@ -74,7 +74,7 @@ $white: #ffff;
 }
 
 .email{
-    border-radius: 60px;
+    border-radius: 3.75rem;
     margin-bottom: 0.5rem;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
@@ -82,7 +82,7 @@ $white: #ffff;
 }
 
 .psswd{
-    border-radius: 60px;
+    border-radius: 3.75rem;
     margin-bottom: 0.5rem;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
@@ -90,7 +90,7 @@ $white: #ffff;
 }
 
 .location-text{
-    border-radius: 60px;
+    border-radius: 3.75rem;
     margin-bottom: 3rem;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;

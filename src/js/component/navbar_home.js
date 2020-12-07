@@ -27,6 +27,9 @@ export const NavbarHome = () => {
 				<Button className="btn-navbar-view" onClick={handleShow}>
 					Login
 				</Button>
+				<Button className="btn-navbar-view" onClick={() => window.location.reload()}>
+					Logout
+				</Button>
 				<Modal show={show} onHide={handleClose} animation={false}>
 					<Modal.Body className="body-form">
 						<p className="logocontainer mt-2 mb-2">
@@ -56,8 +59,8 @@ export const NavbarHome = () => {
 									setError("Password");
 									setDisplayerror("Errormesageshow");
 								} else {
-									// actions.add_new_user(username, email, password, location);
 									actions.login(email, password);
+									handleClose();
 								}
 							}}>
 							Send
