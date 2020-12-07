@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
 import "../../styles/userview.scss";
-import { ModalRoomInputs } from "../component/roomPanel";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
-import { ButtonRoomGenerator } from "../component/roomGeneratorMap";
-import { RoomGeneratorPlants } from "../component/PlantsRoomGenerator";
-import { ModalNewPlant } from "../component/addNewPlant";
+import { ModalRoomInputs } from "../component/roomPanel.jsx";
+import { ButtonRoomGenerator } from "../component/roomGeneratorMap.jsx";
+import { RoomGeneratorPlants } from "../component/PlantsRoomGenerator.jsx";
+import { ModalNewPlant } from "../component/addNewPlant.jsx";
 
 export const Userview = () => {
 	return (

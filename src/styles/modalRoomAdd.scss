@@ -3,11 +3,11 @@ $coral-color: #ff8785;
 $green-button-color: #009ba0;
 $black-as-blue: #2c3e50;
 $white: #ffff;
-$Font: 'Roboto', sans-serif;
+$font: 'Roboto', sans-serif;
 
 .modal-room {
     text-align: center;
-    font-family: $Font;
+    font-family: $font;
 }
 
 .modal-room img {
@@ -18,16 +18,16 @@ $Font: 'Roboto', sans-serif;
 
 .form-input-add-room {
     margin-top: 2rem;
-    font-family: $Font;
+    font-family: $font;
 }
 
-@mixin save-button() {
+.save-button{
     background: $coral-color;
     border: none;
     margin-top: 2rem;
     margin-bottom: 2rem;
     border-radius: 3.125rem;
-    font-family: $Font;
+    font-family: $font;
 
     &:hover{
         background: $coral-color;
@@ -40,7 +40,7 @@ $Font: 'Roboto', sans-serif;
 .modal-add-name-input {
     font-size: 1.2rem;
     font-weight: bold;
-    font-family: $Font;
+    font-family: $font;
 }
 
 .form-room {

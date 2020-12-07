@@ -3,6 +3,7 @@ $coral-color: #ff8785;
 $green-button-color: #009ba0;
 $black-as-blue: #2c3e50;
 $white: #ffff;
+$font: 'Roboto', sans-serif;
 
 .roomsName{
     color: $black-as-blue;
@@ -12,7 +13,6 @@ $white: #ffff;
 }
 
 .card-plant{
-    // display: flex;
     flex-wrap: nowrap;
 }
 
@@ -21,7 +21,6 @@ $white: #ffff;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    // display: flex;
     width: 10rem;
 }
 
@@ -34,9 +33,7 @@ $white: #ffff;
     margin-right: 1.5rem;
     margin-bottom: 1.5rem;
     border-radius: 25px;
-    // font-family: 'Roboto', sans-serif;
     color: $black-as-blue;
-    // border: 0.5rem $black-as-blue;
 }
 
 .container-of-plants{

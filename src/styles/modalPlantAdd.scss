@@ -3,9 +3,9 @@ $coral-color: #ff8785;
 $green-button-color: #009ba0;
 $black-as-blue: #2c3e50;
 $white: #ffff;
-$Font: 'Roboto', sans-serif;
+$font: 'Roboto', sans-serif;
 
-@mixin button-add-plant() {
+.button-add-plant {
     margin-top: 1rem;
     border: solid $green-color;
     margin-right: 2rem;
@@ -18,20 +18,22 @@ $Font: 'Roboto', sans-serif;
     height: 100%;
     width: 19rem;
     text-align: center;
-    font-family: $Font;
+    font-family: $font;
 
     &:hover{
-    background: $green-button-color
+    background: $green-color;
+    color: $black-as-blue;
     }
 
     &:focus{
-    background: $green-button-color;
+    background: $green-color;
+    color: $black-as-blue;
     }
 }
 
 .modal-room{
     text-align: center;
-    font-family: $Font;
+    font-family: $font;
 }
 
 .modal-room img{
@@ -42,10 +44,10 @@ $Font: 'Roboto', sans-serif;
 
 .form-input-add-room{
     margin-top: 2rem;
-    font-family: $Font;
+    font-family: $font;
 }
 
-@mixin save-button() {
+.save-button{
     background: $coral-color;
     border: none;
     margin-top: 2rem;
@@ -53,7 +55,7 @@ $Font: 'Roboto', sans-serif;
     border-radius: 50px;
     font-size: 1.2rem;
     font-weight: bold;
-    font-family: $Font;
+    font-family: $font;
 
     &:hover{
     background: $coral-color;
@@ -63,14 +65,14 @@ $Font: 'Roboto', sans-serif;
     }
 }
 
-.modal-add-name-input{
+.modal-add-name-input .form-label{
     font-size: 1.2rem;
     font-weight: bold;
-    font-family: $Font;
+    font-family: $font;
 }
 
 .form-room{
-    font-family: $Font;
+    font-family: $font;
     color: $black-as-blue;
 }
 .inputPlant{

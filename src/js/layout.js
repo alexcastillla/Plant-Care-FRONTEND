@@ -10,9 +10,9 @@ import { Userview } from "./views/userview";
 
 import injectContext from "./store/appContext";
 
-import { NavbarUser } from "./component/navbar_user";
-import { NavbarHome } from "./component/navbar_home";
-import { Footer } from "./component/footer";
+import { NavbarUser } from "./component/navbar_user.jsx";
+import { NavbarHome } from "./component/navbar_home.jsx";
+import { Footer } from "./component/footer.jsx";
 
 //create your first component
 const Layout = () => {
