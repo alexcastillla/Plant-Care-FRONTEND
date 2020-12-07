@@ -11,12 +11,23 @@ export const ButtonRoomGenerator = () => {
 			store.room.map((item, index) => {
 				return (
 					<button className="span-room-name" key={index}>
-						<p className="m-0">{item.name_room}</p>
+						<p>{item.name_room}</p>
+						<i
+							className="far fa-times-circle"
+							onClick={() => {
+								if (
+									window.confirm(
+										"¿Estás seguro? Si confirmas, se eliminará tanto la ubicación como sus plantas asociadas."
+									)
+								)
+									actions.deleteRoon(event.item.id);
+							}}
+						/>
 					</button>
 				);
 			})
 		);
 	});
 
-	return <div>{listItem}</div>;
+	return <div className="rooms-mapped">{listItem}</div>;
 };
