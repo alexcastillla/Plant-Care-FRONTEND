@@ -7,6 +7,7 @@ import Iconcard from "../../img/icon_card_plant.png";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import { ModalNewPlant } from "../component/addNewPlant.jsx";
+import { ModalRoomInputs } from "./addNewRoom.jsx";
 import "../../styles/PlantsRoomGenerator.scss";
 import { Button } from "react-bootstrap/Button";
 
@@ -28,9 +29,6 @@ export const RoomGeneratorPlants = () => {
 		<Fragment>
 			<div className="container-of-plants">
 				<p className="nameList">Plantas</p>
-				<div className="container-of-addplant">
-					<ModalNewPlant />
-				</div>
 				<div className="container-of-srch">
 					<input
 						className="srch"

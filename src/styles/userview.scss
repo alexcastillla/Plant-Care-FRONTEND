@@ -10,7 +10,6 @@ $font: 'Roboto', sans-serif;
     background: $green-color;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    // height: 20vh;
     overflow: hidden;
 }
 .nameList{
@@ -19,8 +18,8 @@ $font: 'Roboto', sans-serif;
     font-weight: bold;
 }
 .panel{
-    margin-right: 3rem;
-    margin-left: 3rem;
+    margin-right: 3.938rem;
+    margin-left: 3.938rem;
 }
 
 .add-button{
@@ -35,15 +34,6 @@ $font: 'Roboto', sans-serif;
 .inputNameRoom{
     border-radius: 50px;
     margin-top: 1rem;
-}
-.Add-column-room{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.Add-column-room-viewlist{
-    display: flex;
-    align-items: center;
 }
 .room-item-view{
     background: $green-button-color;
@@ -64,13 +54,6 @@ $font: 'Roboto', sans-serif;
     justify-content: center;
     align-items: center;  
 }
-
-// .Add-column-room-name p{
-//     color: $black-as-blue;
-//     font-size: 2rem;
-//     font-weight: bold;
-// }
-
 .modal-dialog {
     max-width: 20rem;
 }
@@ -80,6 +63,12 @@ $font: 'Roboto', sans-serif;
     border: 0.5rem $black-as-blue;
 }
 .newplant{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-of-addplant{
+    margin-top: 0.8rem;
     display: flex;
     align-items: center;
     justify-content: center;

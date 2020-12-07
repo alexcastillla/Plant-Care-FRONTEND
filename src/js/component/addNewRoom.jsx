@@ -15,7 +15,10 @@ export const ModalRoomInputs = () => {
 
 	return (
 		<Fragment>
-			<i className="fas fa-plus-circle fa-2x" onClick={handleShow} />
+			{/* <i className="fas fa-plus-circle fa-2x" onClick={handleShow} /> */}
+			<Button className="button-add-room" onClick={handleShow}>
+				Añade una nueva ubicación
+			</Button>
 			<Modal show={show} onHide={handleClose} className="form-room">
 				<Modal.Body className="modal-room">
 					<img className="room-logo-img" src={logoRoomAdd} />
