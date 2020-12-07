@@ -28,7 +28,7 @@ $white: #ffff;
 .modal-content{
     width: 20rem;
     position: center;
-    height: 30rem;
+    // height: 30rem;
 }
 .logocontainer{
     margin-top: 1.75rem;
@@ -43,4 +43,9 @@ $white: #ffff;
     border: solid $green-color;
     border-radius: 3.125rem;
     background-color: $green-button-color
+}
+.body-form-login{
+    width: 20rem;
+    position: center;
+    height: 30rem;
 }

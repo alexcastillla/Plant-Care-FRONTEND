@@ -31,7 +31,7 @@ export const NavbarHome = () => {
 					Logout
 				</Button>
 				<Modal show={show} onHide={handleClose} animation={false}>
-					<Modal.Body className="body-form">
+					<Modal.Body className="body-form-login">
 						<p className="logocontainer mt-2 mb-2">
 							<img src={logo2} className="logo2" />{" "}
 						</p>
