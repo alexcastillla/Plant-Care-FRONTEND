@@ -5,11 +5,15 @@ $black-as-blue: #2c3e50;
 $white: #ffff;
 $font: 'Roboto', sans-serif;
 
-.roomsName{
-    color: $black-as-blue;
-    font-size: 2rem;
-    font-weight: bold;
+.srch{
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
 
+.nameList{
+    color: $black-as-blue;
+    font-size: 2.7rem;
+    font-weight: bold;
 }
 
 .card-plant{
@@ -43,4 +47,20 @@ $font: 'Roboto', sans-serif;
 
 .direction-card{
     display: flex;
+}
+
+.container-of-addplant{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-of-srch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.8rem;
+}
+input { 
+    text-align: center;
 }

@@ -8,8 +8,19 @@ $font: 'Roboto', sans-serif;
 .room-panel{
     border-bottom-right-radius: 100px;
     background: $green-color;
-    height: 20vh;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    // height: 20vh;
     overflow: hidden;
+}
+.nameList{
+    color: $black-as-blue;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.panel{
+    margin-right: 3rem;
+    margin-left: 3rem;
 }
 
 .add-button{
@@ -54,11 +65,11 @@ $font: 'Roboto', sans-serif;
     align-items: center;  
 }
 
-.Add-column-room-name p{
-    color: $black-as-blue;
-    font-size: 2rem;
-    font-weight: bold;
-}
+// .Add-column-room-name p{
+//     color: $black-as-blue;
+//     font-size: 2rem;
+//     font-weight: bold;
+// }
 
 .modal-dialog {
     max-width: 20rem;

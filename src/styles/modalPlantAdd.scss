@@ -6,9 +6,7 @@ $white: #ffff;
 $font: 'Roboto', sans-serif;
 
 .button-add-plant {
-    margin-top: 1rem;
     border: solid $green-color;
-    margin-right: 2rem;
     font-weight: bold;
     font-size: 1.4rem;
     padding: 0 1rem 0.4rem 1rem;
@@ -16,7 +14,6 @@ $font: 'Roboto', sans-serif;
     border-radius: 50px;
     background: $green-color;
     height: 100%;
-    width: 19rem;
     text-align: center;
     font-family: $font;
 
