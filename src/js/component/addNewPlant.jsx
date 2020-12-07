@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext, Fragment } from "react";
 import { Context } from "../store/appContext";
-import "../../styles/modalPlantAdd.scss";
+import "../../styles/addNewPlant.scss";
 import addplantlogo from "../../img/addplantlogo.png";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
@@ -32,21 +32,24 @@ export const ModalNewPlant = () => {
 						}}
 						className="form-input-add-room">
 						<Form.Group controlId="formNameRoom">
-							<Form.Label className="modal-Add-name-input">Nombre de la planta</Form.Label>
+							<Form.Label className="modal-name">Nombre de la planta</Form.Label>
 							<Form.Control
 								className="inputPlant"
+								required
 								type="string"
 								onChange={e => setNamePlant(e.target.value)}
 							/>
-							<Form.Label className="modal-Add-name-input mt-2">Ubicación</Form.Label>
+							<Form.Label className="modal-name mt-2">Ubicación</Form.Label>
 							<Form.Control
 								className="inputPlant"
+								required
 								type="string"
 								onChange={e => setLocationPlant(e.target.value)}
 							/>
-							<Form.Label className="modal-Add-name-input mt-2">Tipo de planta</Form.Label>
+							<Form.Label className="modal-name mt-2">Tipo de planta</Form.Label>
 							<Form.Control
 								className="inputPlant"
+								required
 								onChange={e => setTipoPlant(e.target.value)}
 								as="select"
 								defaultValue="Elige...">
@@ -55,9 +58,10 @@ export const ModalNewPlant = () => {
 									return <option key={index}>{grow.name_grow_phase}</option>;
 								})}
 							</Form.Control>
-							<Form.Label className="modal-Add-name-input mt-2">Fase de crecimiento</Form.Label>
+							<Form.Label className="modal-name mt-2">Fase de crecimiento</Form.Label>
 							<Form.Control
 								className="inputPlant"
+								required
 								onChange={e => setGrowPlant(e.target.value)}
 								as="select"
 								defaultValue="Elige...">
@@ -66,9 +70,10 @@ export const ModalNewPlant = () => {
 									return <option key={index}>{type.name_type}</option>;
 								})}
 							</Form.Control>
-							<Form.Label className="modal-Add-name-input mt-2">Número de sensor</Form.Label>
+							<Form.Label className="modal-name mt-2">Número de sensor</Form.Label>
 							<Form.Control
 								className="inputPlant"
+								required
 								type="string"
 								onChange={e => setSensorPlant(e.target.value)}
 							/>

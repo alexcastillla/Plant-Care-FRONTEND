@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext, Fragment } from "react";
 import { Context } from "../store/appContext";
-import "../../styles/modalRoomAdd.scss";
+import "../../styles/addNewRoom.scss";
 import logoRoomAdd from "../../img/logo_room_add.png";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
@@ -15,7 +15,6 @@ export const ModalRoomInputs = () => {
 
 	return (
 		<Fragment>
-			{/* <i className="fas fa-plus-circle fa-2x" onClick={handleShow} /> */}
 			<Button className="button-add-room" onClick={handleShow}>
 				Añade una nueva ubicación
 			</Button>
@@ -30,6 +29,7 @@ export const ModalRoomInputs = () => {
 						<Form.Group controlId="formNameRoom">
 							<Form.Label className="modal-add-name-input">Nombre de la ubicación</Form.Label>
 							<Form.Control
+								required
 								className="inputNameRoom"
 								type="string"
 								onChange={e => setNameRoom(e.target.value)}

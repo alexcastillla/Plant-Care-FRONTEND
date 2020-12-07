@@ -62,7 +62,7 @@ $font: 'Roboto', sans-serif;
     }
 }
 
-.modal-add-name-input .form-label{
+.modal-name {
     font-size: 1.2rem;
     font-weight: bold;
     font-family: $font;
@@ -86,4 +86,7 @@ $font: 'Roboto', sans-serif;
 }
 .plant-logo-img{
     height: 4rem;
+}
+label{
+    font-weight: bold;  
 }

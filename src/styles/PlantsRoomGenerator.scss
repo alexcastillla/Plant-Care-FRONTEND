@@ -27,12 +27,22 @@ $font: 'Roboto', sans-serif;
     margin-right: auto;
     width: 10rem;
 }
-
-.temperature{
-    margin-top: 0.7rem;
+.humidity{
+    margin-bottom: 0.4rem;
 }
+.temperature{
+    margin-top: 0.4rem;
+    margin-bottom: 0rem;
+    color: $coral-color;
+    font-size: 2rem;
 
+}
+.name-room{
+    font-weight: bold;
+    color: $green-button-color;
+}
 .card{
+    font-family: $font;
     margin-top: 0.7rem;
     margin-right: 1.5rem;
     margin-bottom: 1.5rem;
@@ -63,4 +73,24 @@ $font: 'Roboto', sans-serif;
 }
 input { 
     text-align: center;
+}
+.button-info{
+    border: solid $green-color;
+    font-weight: bold;
+    font-size: 1rem;
+    color: $black-as-blue;
+    border-radius: 50px;
+    background: $green-color;
+    text-align: center;
+    font-family: $font;
+
+    &:hover{
+    background: $green-color;
+    color: $black-as-blue;
+    }
+
+    &:focus{
+    background: $green-color;
+    color: $black-as-blue;
+    }
 }
