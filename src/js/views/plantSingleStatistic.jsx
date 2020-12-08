@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import PropTypes from "prop-types";
 import "../../styles/plantSingleStatistic.scss";
+import Iconcard from "../../img/statistics.png";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
@@ -14,7 +15,8 @@ export const PlantSingleStatistic = () => {
 	const { store, actions } = useContext(Context);
 	let { plantName } = useParams();
 
-	// let plant = store.plantDetail.find(plant => plant.name === String(plantName));
+	let plant = store.plants.find(plant => plant.name_plant == String(plantName));
+	console.log(plant);
 	useEffect(() => {});
 
 	useEffect(() => {
@@ -44,6 +46,9 @@ export const PlantSingleStatistic = () => {
 							}
 						}
 					]
+				},
+				animation: {
+					duration: 3000
 				}
 			}
 		});
@@ -70,6 +75,9 @@ export const PlantSingleStatistic = () => {
 							}
 						}
 					]
+				},
+				animation: {
+					duration: 3000
 				}
 			}
 		});
@@ -77,27 +85,70 @@ export const PlantSingleStatistic = () => {
 
 	return (
 		<div className="container">
+			<p className="nameList">Detalle de la planta:</p>
 			<Container className="container-card-info">
 				<Row>
 					<Col ml={4} offset={4}>
 						<Card className="card-info">
 							<Card.Body>
-								<Card.Title>Nombre:</Card.Title>
-								<Card.Text>
-									<ul>
-										<li>Tipo de planta: </li>
-										<li>Fase de Crecimiento: </li>
-										<li>Temperatura ideal: °C</li>
-										<li>Desviación temperatura: %</li>
-										<li>Humedad ideal: %</li>
-										<li>Desviación húmedad: %</li>
-									</ul>
-								</Card.Text>
+								<Row>
+									<Card.Text>
+										<p>
+											Hola soy <label>{plant.name_plant}</label> y estoy conectada al sensor{" "}
+											<label>{plant.sensor_number}</label>.
+										</p>
+										<p>
+											Mi temperatura y humedad actual es de{" "}
+											<label>
+												{plant.temperature_sensor}
+												°C
+											</label>{" "}
+											y <label>{plant.humidity_sensor}%</label>.
+										</p>
+										<p>
+											Como me encuentro en fase de <label>{plant.grow_phase}</label> mi
+											temperatura y humedad ideal es de:
+										</p>
+										<ul>
+											<li>
+												Temperatura máxima ideal:{" "}
+												<label>
+													{plant.temperature_max_ideal}
+													°C
+												</label>
+											</li>
+											<li>
+												Temperatura mínima ideal:{" "}
+												<label>
+													{plant.temperature_min_ideal}
+													°C
+												</label>
+											</li>
+											<li>
+												Humedad máxima ideal: <label>{plant.humidity_max_ideal}%</label>
+											</li>
+											<li>
+												Humedad mínima ideal: <label>{plant.humidity_min_ideal}%</label>
+											</li>
+										</ul>
+									</Card.Text>
+									<Card.Img src={Iconcard} className="card-img" />
+								</Row>
 							</Card.Body>
 						</Card>
 					</Col>
 				</Row>
 			</Container>
+			<p className="nameList">Histórico:</p>
+			<Card className="card-info-data">
+				<Card.Body>
+					<Card.Text className="card-text-data">
+						<p>
+							A continuación, se muestran los valores recogidos en las últimos horas por parte del sensor:
+						</p>
+					</Card.Text>
+				</Card.Body>
+			</Card>
 			<Container>
 				<Row>
 					<Col ml={6}>
