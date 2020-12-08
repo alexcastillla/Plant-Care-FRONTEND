@@ -7,6 +7,7 @@ import { Demo } from "./views/demo";
 import { Error } from "./views/error";
 import { PlantsInfo } from "./views/single";
 import { Userview } from "./views/userview";
+import { PlantSingleStatistic } from "./views/plantSingleStatistic.jsx";
 
 import injectContext from "./store/appContext";
 
@@ -35,6 +36,7 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/username/:plantName">
 							<NavbarUser />
+							<PlantSingleStatistic />
 						</Route>
 						<Route>
 							<NavbarUser />
