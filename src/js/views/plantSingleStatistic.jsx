@@ -94,41 +94,45 @@ export const PlantSingleStatistic = () => {
 								<Row>
 									<Card.Text>
 										<p>
-											Hola soy <label>{plant.name_plant}</label> y estoy conectada al sensor{" "}
-											<label>{plant.sensor_number}</label>.
+											Hola soy <label className="label-single">{plant.name_plant}</label> y estoy
+											conectada al sensor{" "}
+											<label className="label-single">{plant.sensor_number}</label>.
 										</p>
 										<p>
 											Mi temperatura y humedad actual es de{" "}
-											<label>
+											<label className="label-single">
 												{plant.temperature_sensor}
 												°C
 											</label>{" "}
-											y <label>{plant.humidity_sensor}%</label>.
+											y <label className="label-single">{plant.humidity_sensor}%</label>.
 										</p>
 										<p>
-											Como me encuentro en fase de <label>{plant.grow_phase}</label> mi
-											temperatura y humedad ideal es de:
+											Como me encuentro en fase de{" "}
+											<label className="label-single">{plant.grow_phase}</label> mi temperatura y
+											humedad ideal es de:
 										</p>
 										<ul>
 											<li>
 												Temperatura máxima ideal:{" "}
-												<label>
+												<label className="label-single">
 													{plant.temperature_max_ideal}
 													°C
 												</label>
 											</li>
 											<li>
 												Temperatura mínima ideal:{" "}
-												<label>
+												<label className="label-single">
 													{plant.temperature_min_ideal}
 													°C
 												</label>
 											</li>
 											<li>
-												Humedad máxima ideal: <label>{plant.humidity_max_ideal}%</label>
+												Humedad máxima ideal:{" "}
+												<label className="label-single">{plant.humidity_max_ideal}%</label>
 											</li>
 											<li>
-												Humedad mínima ideal: <label>{plant.humidity_min_ideal}%</label>
+												Humedad mínima ideal:{" "}
+												<label className="label-single">{plant.humidity_min_ideal}%</label>
 											</li>
 										</ul>
 									</Card.Text>
