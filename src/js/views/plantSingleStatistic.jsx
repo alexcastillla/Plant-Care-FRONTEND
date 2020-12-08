@@ -18,8 +18,8 @@ export const PlantSingleStatistic = () => {
 	useEffect(() => {});
 
 	useEffect(() => {
-		let temperature_input = document.getElementById("chart-temperature");
-		let humidity_input = document.getElementById("chart-humidity");
+		let temperature_input = document.querySelector(".chart-temperature");
+		let humidity_input = document.querySelector(".chart-humidity");
 
 		let temperature_chart = new Chart(temperature_input, {
 			type: "line",
