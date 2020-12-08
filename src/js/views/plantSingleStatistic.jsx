@@ -18,8 +18,10 @@ export const PlantSingleStatistic = () => {
 	useEffect(() => {});
 
 	useEffect(() => {
-		var ctx = document.getElementById("myChart");
-		var myChart = new Chart(ctx, {
+		let temperature_input = document.getElementById("chart-temperature");
+		let humidity_input = document.getElementById("chart-humidity");
+
+		let temperature_chart = new Chart(temperature_input, {
 			type: "line",
 			data: {
 				labels: [10, 11, 12, 13],
@@ -45,11 +47,7 @@ export const PlantSingleStatistic = () => {
 				}
 			}
 		});
-	});
-
-	useEffect(() => {
-		var ctx = document.getElementById("myChart2");
-		var myChart = new Chart(ctx, {
+		let humidity_chart = new Chart(humidity_input, {
 			type: "line",
 			data: {
 				labels: [1, 2, 3, 4, "sjdasj", 6],
@@ -90,7 +88,9 @@ export const PlantSingleStatistic = () => {
 										<li>Tipo de planta: </li>
 										<li>Fase de Crecimiento: </li>
 										<li>Temperatura ideal: °C</li>
+										<li>Desviación temperatura: %</li>
 										<li>Humedad ideal: %</li>
+										<li>Desviación húmedad: %</li>
 									</ul>
 								</Card.Text>
 							</Card.Body>
@@ -101,10 +101,10 @@ export const PlantSingleStatistic = () => {
 			<Container>
 				<Row>
 					<Col ml={6}>
-						<canvas className="chart" id="myChart" />
+						<canvas className="chart-temperature" id="chart-temperature" />
 					</Col>
 					<Col ml={6}>
-						<canvas className="chart" id="myChart2" />
+						<canvas className="chart-humidity" id="chart-humidity" />
 					</Col>
 				</Row>
 			</Container>
