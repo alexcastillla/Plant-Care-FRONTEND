@@ -16,8 +16,6 @@ export const PlantSingleStatistic = () => {
 	let { plantName } = useParams();
 
 	let plant = store.plants.find(plant => plant.name_plant == String(plantName));
-	console.log(plant);
-	useEffect(() => {});
 
 	useEffect(() => {
 		let temperature_input = document.querySelector(".chart-temperature");
@@ -55,7 +53,7 @@ export const PlantSingleStatistic = () => {
 		let humidity_chart = new Chart(humidity_input, {
 			type: "line",
 			data: {
-				labels: [1, 2, 3, 4, "sjdasj", 6],
+				labels: [1, 2, 3, 4, 5, 6],
 				datasets: [
 					{
 						label: "Humedad",
@@ -81,7 +79,8 @@ export const PlantSingleStatistic = () => {
 				}
 			}
 		});
-	});
+	}),
+		[plant];
 
 	return (
 		<div className="container">

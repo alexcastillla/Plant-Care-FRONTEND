@@ -162,9 +162,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => {
 						console.log("Creating plant, error status: ", error);
 					});
-            },
+			},
 
-            getPlants: () => {
+			getPlants: () => {
 				fetch(url.concat("/user/", getStore().currentUser, "/plants"))
 					.then(response => {
 						if (!response.ok) {
@@ -178,7 +178,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => {
 						console.log("Error status: ", error);
 					});
-			},
+			}
 		}
 	};
 };
