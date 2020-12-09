@@ -120,7 +120,6 @@ $font: 'Montserrat', sans-serif;
         flex-direction: column;
         justify-items: center;
         margin-top: 4rem;
-        background-color: $green-color;
     }
     .texto-6{
         display: flex;
@@ -130,13 +129,13 @@ $font: 'Montserrat', sans-serif;
         padding: 2rem;
         font-family: $font;
         font-weight: 600;
-        background-color: white;
-        border-top: solid 4rem $green-color;
+        background-color: $green-color;
     }
     .photo-6{
         margin-left: auto;
         margin-right: auto;
         margin-top: 3rem;
         margin-bottom: 3rem;
+        width: 40rem;
     }
 }
