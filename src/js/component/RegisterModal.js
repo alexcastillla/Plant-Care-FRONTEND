@@ -28,7 +28,7 @@ export const Registermodal = () => {
 			<Modal show={show} onHide={handleClose} animation={false}>
 				<Modal.Body className="body-form">
 					<p className="logocontainer mt-2 mb-2">
-						<img src={logo2} className="logo2" />{" "}
+						<img src={logo2} className="logo2" />
 					</p>
 					<p className={displayerror}>The {error} is invalid</p>
 					<Form>
