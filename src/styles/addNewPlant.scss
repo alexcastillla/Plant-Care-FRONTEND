@@ -1,0 +1,92 @@
+$green-color: #e3f8e8;
+$coral-color: #ff8785;
+$green-button-color: #009ba0;
+$black-as-blue: #2c3e50;
+$white: #ffff;
+$font: 'Roboto', sans-serif;
+
+.button-add-plant {
+    border: solid $green-color;
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding: 0 1rem 0.4rem 1rem;
+    color: $black-as-blue;
+    border-radius: 50px;
+    background: $green-color;
+    height: 100%;
+    text-align: center;
+    font-family: $font;
+
+    &:hover{
+    background: $green-color;
+    color: $black-as-blue;
+    }
+
+    &:focus{
+    background: $green-color;
+    color: $black-as-blue;
+    }
+}
+
+.modal-room{
+    text-align: center;
+    font-family: $font;
+}
+
+.modal-room img{
+    margin-top: 0.8rem;
+    height: 4rem;
+    width: 4rem;
+}
+
+.form-input-add-room{
+    margin-top: 2rem;
+    font-family: $font;
+}
+
+.save-button{
+    background: $coral-color;
+    border: none;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: $font;
+
+    &:hover{
+    background: $coral-color;
+    }
+    &:active{
+    background: $coral-color;
+    }
+}
+
+.modal-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: $font;
+}
+
+.form-room{
+    font-family: $font;
+    color: $black-as-blue;
+}
+.inputPlant{
+    border-radius: 50px;
+}
+
+.modal-dialog {
+    max-width: 27rem;
+}
+
+.modal-content{
+    border-radius: 25px;
+    border: 0.5rem $black-as-blue;
+}
+.plant-logo-img{
+    height: 4rem;
+}
+label{
+    font-weight: bold;  
+}

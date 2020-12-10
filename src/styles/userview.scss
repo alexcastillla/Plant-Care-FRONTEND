@@ -1,0 +1,75 @@
+$green-color: #e3f8e8;
+$coral-color: #ff8785;
+$green-button-color: #009ba0;
+$black-as-blue: #2c3e50;
+$white: #ffff;
+$font: 'Roboto', sans-serif;
+
+.room-panel{
+    border-bottom-right-radius: 100px;
+    background: $green-color;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    overflow: hidden;
+}
+.nameList{
+    color: $black-as-blue;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.panel{
+    margin-right: 3.938rem;
+    margin-left: 3.938rem;
+}
+
+.add-button{
+    border: none;
+    background: none;
+}
+.add-button-img{
+    width: 40px;
+    height: 40px;
+}
+
+.inputNameRoom{
+    border-radius: 50px;
+    margin-top: 1rem;
+}
+.room-item-view{
+    background: $green-button-color;
+    border: none;
+    border-radius: 50px;
+    color: $white;
+    font-weight: bold;
+    width: 10rem;
+    height: 2.5rem;
+}
+
+.modal-new-room{
+    border-radius: 50px;
+}
+
+.Add-column-room-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.modal-dialog {
+    max-width: 20rem;
+}
+
+.modal-content{
+    border-radius: 25px;
+    border: 0.5rem $black-as-blue;
+}
+.newplant{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-of-addplant{
+    margin-top: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,141 @@
+$green-color: #e3f8e8;
+$coral-color: #ff8785;
+$green-button-color: #009ba0;
+$black-as-blue: #2c3e50;
+$white: #ffff;
+$font: 'Montserrat', sans-serif;
+
+@media (min-width: 1201px) {
+
+    .texto-1{
+        font-size: 3.5rem;
+        font-family: $font;
+        font-weight: 600;
+        width: 40rem;
+        margin-left: 5rem;
+        margin-top: 3rem;
+    }
+
+    .texto-2{
+        font-size: 2rem;
+        font-family: $font;
+        font-weight: 500;
+        width: 35rem;
+        margin-left: 5rem;
+        margin-top: 3rem;
+    }
+
+    .photo-1{
+        height: 23rem;
+        margin-left: 5rem;
+        margin-bottom: 6rem;
+        margin-top: 2rem;
+    }
+
+    .first-section{
+        display: flex;
+        justify-content: center;
+        background-color: $green-color;
+    }
+    .second-section{
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    .photo-2{
+        margin-top: 3rem;
+        margin-left: 2rem;
+        height: 27rem;
+    }
+
+    .texto-3{
+        display: flex;
+        justify-content: center;
+        font-size: 4rem;
+        font-family: $font;
+        font-weight: 600;
+    }
+
+    .third-section{
+        margin-top: 4rem;
+    }
+    .third-section-row{
+        display: flex;
+        justify-content: center;
+        background-color: $green-color;
+    }
+
+    .texto-4{
+        display: flex;
+        justify-content: center;
+        font-size: 2rem;
+        font-family: $font;
+        font-weight: 500;
+        margin-left: 7rem;
+        margin-top: 10rem;
+        text-align: center;
+        width: 42rem;
+    }
+
+    .texto-5{
+        display: flex;
+        justify-content: center;
+        font-size: 2rem;
+        font-family: $font;
+        font-weight: 500;
+        margin-left: 7rem;
+        text-align: left;
+        width: 42rem;
+        margin-top: 10rem;
+    }
+
+    .photo-3{
+        height: 26rem;
+        margin-top: 2rem;
+        margin-left: 2rem;
+         margin-bottom: 2rem;
+    }
+    .photo-4{
+        height: 24rem;
+        margin-top: 4rem;
+    }
+
+    .fourth-section-row{
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+        margin-left: 8rem;
+    }
+    .lista-1{
+        font-size: 2rem;
+        font-family: $font;
+        font-weight: 500;
+        margin-left: 7rem;
+        text-align: left;
+        width: 42rem;
+        margin-top: 10rem;
+    }
+    .fith-section-row{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        margin-top: 4rem;
+    }
+    .texto-6{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 4rem;
+        padding: 2rem;
+        font-family: $font;
+        font-weight: 600;
+        background-color: $green-color;
+    }
+    .photo-6{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        width: 40rem;
+    }
+}

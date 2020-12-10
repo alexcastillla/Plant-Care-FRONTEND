@@ -77,7 +77,10 @@
 		]
 	},
 	"dependencies": {
+		"@material-ui/core": "^4.11.2",
 		"bootstrap": "^4.5.3",
+		"chart.js": "^2.9.4",
+		"chartjs-plugin-annotation": "^0.5.7",
 		"prop-types": "^15.6.1",
 		"react": "^16.8.4",
 		"react-bootstrap": "^1.4.0",

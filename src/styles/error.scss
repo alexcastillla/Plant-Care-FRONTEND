@@ -1,0 +1,47 @@
+$green-color: #e3f8e8;
+$coral-color: #ff8785;
+$green-button-color: #009ba0;
+$black-as-blue: #2c3e50;
+$white: #ffff;
+$font: 'Roboto', sans-serif;
+
+.page_404 {
+    display: flex;
+    align-items: center; 
+    background: $white; 
+    font-family: $font;
+    margin-top: 5rem;
+    height: 70vh;
+    font-weight: bold;
+    color: $black-as-blue;
+    font-size: 2rem;
+}
+
+.page_404 img { 
+    width:100%;
+}
+
+.four_zero_four_bg {
+    background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+    height: 25rem;
+    background-position: center;
+ }
+
+			 
+.link_404 {			 
+	color: #fff;
+    padding: 0.625rem 1.25rem;
+    background: $green-color;
+    margin: 1.25rem 0;
+    display: inline-block;
+}
+
+.four_zero_four_bg{
+    font-size: 4rem;
+    font-family: $font;
+    color: $black-as-blue;
+}
+.contant_box_404{
+    font-family: $font;
+    color: $black-as-blue;
+}
