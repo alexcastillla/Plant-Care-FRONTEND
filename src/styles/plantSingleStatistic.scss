@@ -1,0 +1,40 @@
+$green-color: #e3f8e8;
+$coral-color: #ff8785;
+$green-button-color: #009ba0;
+$black-as-blue: #2c3e50;
+$white: #ffff;
+$font: 'Roboto', sans-serif;
+
+.container-card-info{
+    padding: 0;
+}
+
+.card-info{
+    font-family: $font;
+    color: $black-as-blue;
+    font-size: 1rem;
+    padding: 1rem;
+
+}
+
+.card-text-data p{
+    text-align: center;
+    margin-bottom: 0;
+}
+li{
+    list-style:none;
+}
+
+.label-single{
+    color: $coral-color;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.chart-temperatute .chart-humidity{
+    width: 15rem;
+}
+.card-img{
+    height: 16rem;
+    width: 16rem;
+}

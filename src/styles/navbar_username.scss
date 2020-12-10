@@ -3,11 +3,10 @@ $coral-color: #ff8785;
 $green-button-color: #009ba0;
 $black-as-blue: #2c3e50;
 $white: #ffff;
-
 $font: 'Roboto', sans-serif;
 
 .navbar{
-    height: 4rem;
+    height: 7vh;
     background-color: $white;
 }
 .logo-navbar{
@@ -26,29 +25,5 @@ $font: 'Roboto', sans-serif;
     height: 100%;
     width: 10rem;
     text-align: center;
-  
-.modal-content{
-    width: 20rem;
-    position: center;
-    // height: 30rem;
-}
-.logocontainer{
-    margin-top: 1.75rem;
-    margin-bottom: 4.9rem;
-}
-.logo2{
-    margin-top: 1rem;
-    margin-bottom: 4rem;
-}
-.Save-login{
-    margin-top: 3rem;
-    border: solid $green-color;
-    border-radius: 3.125rem;
-    background-color: $green-button-color
-}
-.body-form-login{
-    width: 20rem;
-    position: center;
-    height: 30rem;
     font-family: $font;
 }

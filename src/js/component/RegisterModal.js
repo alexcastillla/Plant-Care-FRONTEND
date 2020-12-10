@@ -8,9 +8,6 @@ import logo2 from "../../img/logo2.jpg";
 import profilephoto from "../../img/profilephoto.jpg";
 
 export const Registermodal = () => {
-	const [show, setShow] = useState(false);
-	const handleClose = () => setShow(false);
-	const handleShow = () => setShow(true);
 	const { store, actions } = useContext(Context);
 	const [username, setUsername] = useState("");
 	const [email, setEmail] = useState("");
@@ -18,11 +15,15 @@ export const Registermodal = () => {
 	const [location, setLocation] = useState("");
 	const [error, setError] = useState("");
 	const [displayerror, setDisplayerror] = useState("Errormesage");
+	const [show, setShow] = useState(false);
+
+	const handleClose = () => setShow(false);
+	const handleShow = () => setShow(true);
 
 	return (
 		<>
 			<Button className="join-button-home" onClick={handleShow}>
-				Join
+				Registrate ahora
 			</Button>
 
 			<Modal show={show} onHide={handleClose} animation={false}>
@@ -54,18 +55,14 @@ export const Registermodal = () => {
 							if (username.length < 5) {
 								setError("Username");
 								setDisplayerror("Errormesageshow");
-							}
-							// if (!("@" in email)) {
-							// 	alert("Email is invalid");
-							// }
-							else if (password.length < 6) {
+							} else if (password.length < 6) {
 								setError("Password");
 								setDisplayerror("Errormesageshow");
 							} else if (location.length < 4) {
 								setError("Location");
 								setDisplayerror("Errormesageshow");
 							} else {
-								actions.add_new_user(username, email, password, location);
+								actions.addUser(username, email, password, location);
 								setDisplayerror("Errormesage");
 							}
 						}}>
