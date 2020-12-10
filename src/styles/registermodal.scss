@@ -12,7 +12,7 @@ $white: #ffff;
     border:none;
     color:$black-as-blue;
     font-weight: bold;
-    margin-bottom: 8rem;
+    margin-bottom: 3rem;
     margin-top: 3rem;
     
 }
@@ -30,22 +30,21 @@ $white: #ffff;
 
 .join-button-home{
     background-color: $green-color;
-    width:  20rem;
+    width:  22rem;
     border: none;
     border-radius: 3.125rem;
     color: $black-as-blue;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     font-family: 'Roboto', sans-serif;
 }
 
 .join-button-home:hover{
     background-color: $green-color;
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     font-family: 'Roboto', sans-serif;
 }
 .join-button-home:active{
-    // background-color: $coral-color;
     border-radius: 3.125rem;
     border: none;
     background-color: $green-color;

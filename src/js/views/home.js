@@ -52,7 +52,9 @@ export const Home = () => (
 			</div>
 			<div className="fith-section-row">
 				<p className="texto-6">No esperes más, empieza ahora mismo</p>
-        <Registermodal />
+				<div className="fith-section-button">
+					<Registermodal />
+				</div>
 				<img className="photo-6" src={logo6} />
 			</div>
 		</div>

@@ -9,17 +9,21 @@ import profilephoto from "../../img/profilephoto.jpg";
 
 export const Registermodal = () => {
 	const { store, actions } = useContext(Context);
-	const [user, setUser] = useState({ username: "", email: "", password: "", location: "" });
+	const [username, setUsername] = useState("");
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+	const [location, setLocation] = useState("");
 	const [error, setError] = useState("");
 	const [displayerror, setDisplayerror] = useState("Errormesage");
 	const [show, setShow] = useState(false);
+
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
 
 	return (
 		<>
 			<Button className="join-button-home" onClick={handleShow}>
-				Join
+				Registrate ahora
 			</Button>
 
 			<Modal show={show} onHide={handleClose} animation={false}>

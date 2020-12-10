@@ -36,6 +36,7 @@ $font: 'Montserrat', sans-serif;
         display: flex;
         justify-content: center;
         background-color: $green-color;
+        padding-top: 2rem;
     }
     .second-section{
         margin-top: 5rem;
@@ -137,5 +138,10 @@ $font: 'Montserrat', sans-serif;
         margin-top: 3rem;
         margin-bottom: 3rem;
         width: 40rem;
+    }
+    .fith-section-button{
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
 }
