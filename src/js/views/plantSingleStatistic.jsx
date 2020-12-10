@@ -102,7 +102,7 @@ export const PlantSingleStatistic = () => {
 											<label className="label-single">
 												{plant.temperature_sensor}
 												°C
-											</label>{" "}
+											</label>
 											y <label className="label-single">{plant.humidity_sensor}%</label>.
 										</p>
 										<p>
