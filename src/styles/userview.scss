@@ -8,11 +8,9 @@ $font: 'Roboto', sans-serif;
 .room-panel{
     border-bottom-right-radius: 100px;
     background: $green-color;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
     overflow: hidden;
 }
-.nameList{
+.nameList p{
     color: $black-as-blue;
     font-size: 2rem;
     font-weight: bold;

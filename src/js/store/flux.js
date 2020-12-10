@@ -139,6 +139,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.log("Error status: ", error);
 					});
 			},
+
 			createRoom: nameRoom => {
 				fetch(url.concat("/user/", getStore().currentUser, "/rooms"), {
 					method: "POST",
@@ -174,6 +175,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.catch(error => {
 						console.log("Error status: ", error);
+					});
+			},
+
+			deleteRoom: id => {
+				fetch(url.concat("/user/", getStore().currentUser, "/rooms/", id), {
+					method: "DELETE"
+				})
+					.then(response => {
+						if (!response.ok) {
+							throw new Error(response.status);
+						}
+						return response.json();
+					})
+					.then(() => {
+						getActions().getRoom();
+					})
+					.catch(error => {
+						console.log("Creating contact, error status: ", error);
 					});
 			},
 

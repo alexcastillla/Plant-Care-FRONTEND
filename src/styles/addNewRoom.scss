@@ -75,11 +75,23 @@ $font: 'Roboto', sans-serif;
     border: solid $green-button-color;
     font-weight: bold;
     font-size: 1.4rem;
-    padding: 0 1rem 0.4rem 1rem;
     color: $white;
     margin-left: 0.5rem;
     border-radius: 0.5rem;
     background: $green-button-color;
-    height: 100%;
-    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.span-room-name p{
+    margin-bottom: 0.2rem;
+}
+
+.rooms-mapped{
+    display: flex;
+    margin-bottom: 2rem;
+}
+.far{
+    display: flex;
+    align-items: center;
+    margin-left: 0.8rem;
 }
