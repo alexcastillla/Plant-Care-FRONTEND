@@ -8,11 +8,11 @@ import logo2 from "../../img/logo2.jpg";
 import profilephoto from "../../img/profilephoto.jpg";
 
 export const Registermodal = () => {
-    const { store, actions } = useContext(Context);
-    const [user, setUser] = useState({username:"", email:"", password:"", location:""});
+	const { store, actions } = useContext(Context);
+	const [user, setUser] = useState({ username: "", email: "", password: "", location: "" });
 	const [error, setError] = useState("");
-    const [displayerror, setDisplayerror] = useState("Errormesage");
-    const [show, setShow] = useState(false);
+	const [displayerror, setDisplayerror] = useState("Errormesage");
+	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
 
@@ -25,7 +25,7 @@ export const Registermodal = () => {
 			<Modal show={show} onHide={handleClose} animation={false}>
 				<Modal.Body className="body-form">
 					<p className="logocontainer mt-2 mb-2">
-						<img src={logo2} className="logo2" />{" "}
+						<img src={logo2} className="logo2" />
 					</p>
 					<p className={displayerror}>The {error} is invalid</p>
 					<Form>
@@ -51,18 +51,14 @@ export const Registermodal = () => {
 							if (username.length < 5) {
 								setError("Username");
 								setDisplayerror("Errormesageshow");
-							}
-							// if (!("@" in email)) {
-							// 	alert("Email is invalid");
-							// }
-							else if (password.length < 6) {
+							} else if (password.length < 6) {
 								setError("Password");
 								setDisplayerror("Errormesageshow");
 							} else if (location.length < 4) {
 								setError("Location");
 								setDisplayerror("Errormesageshow");
 							} else {
-								actions.add_new_user(username, email, password, location);
+								actions.addUser(username, email, password, location);
 								setDisplayerror("Errormesage");
 							}
 						}}>
