@@ -20,12 +20,11 @@ $font: 'Roboto', sans-serif;
     flex-wrap: nowrap;
 }
 
-.card-img{
-    margin-top: 0.2rem;
+.card-img-top{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 10rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 13rem;
 }
 .humidity{
     margin-bottom: 0.4rem;

@@ -6,7 +6,7 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 import Iconcard from "../../img/icon_card_plant.png";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
-import { ModalNewPlant } from "../component/addNewPlant.jsx";
+import { ModalNewPlant } from "./addNewPlant.jsx";
 import { ModalRoomInputs } from "./addNewRoom.jsx";
 import "../../styles/PlantsRoomGenerator.scss";
 import { Button } from "react-bootstrap/Button";
@@ -39,8 +39,8 @@ export const RoomGeneratorPlants = () => {
 				</div>
 				<div className="direction-card">
 					{filteredPlants.map((plant, idx) => (
-						<Card style={{ width: "17rem" }} className="card-plant" key={idx}>
-							<Card.Img variant="top" src={Iconcard} className="card-img" />
+						<Card className="card-plant" key={idx}>
+							<img src={Iconcard} className="card-img-top" />
 							<Card.Body>
 								<Card.Title>{plant.name_plant}</Card.Title>
 								<Card.Text className="humidity">Humedad:</Card.Text>

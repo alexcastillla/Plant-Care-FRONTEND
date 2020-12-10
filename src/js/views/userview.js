@@ -9,6 +9,11 @@ import { ButtonRoomGenerator } from "../component/roomGeneratorMap.jsx";
 import { RoomGeneratorPlants } from "../component/PlantsRoomGenerator.jsx";
 
 export const Userview = () => {
+	useEffect(() => {
+		actions.getRoom();
+		actions.getPlants();
+	}, []);
+
 	return (
 		<Fragment>
 			<div className="room-panel">

@@ -32,17 +32,21 @@ $font: 'Roboto', sans-serif;
     text-align: center;
     font-family: $font;
 }
-
+.form-group-plant{
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
 .modal-room img{
     margin-top: 0.8rem;
     height: 4rem;
     width: 4rem;
 }
 
-.form-input-add-room{
-    margin-top: 2rem;
-    font-family: $font;
-}
+// .form-input-add-room{
+//     margin-bottom: 3rem;
+//     margin-top: 3rem;
+//     font-family: $font;
+// }
 
 .save-button{
     background: $coral-color;

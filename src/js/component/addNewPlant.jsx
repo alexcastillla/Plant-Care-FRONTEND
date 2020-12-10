@@ -30,8 +30,8 @@ export const ModalNewPlant = () => {
 						onSubmit={e => {
 							e.preventDefault();
 						}}
-						className="form-input-add-room">
-						<Form.Group controlId="formNameRoom">
+						className="form-group-plant">
+						<Form.Group controlId="formNameRoom" className="form-group-plant">
 							<Form.Label className="modal-name">Nombre de la planta</Form.Label>
 							<Form.Control
 								className="inputPlant"

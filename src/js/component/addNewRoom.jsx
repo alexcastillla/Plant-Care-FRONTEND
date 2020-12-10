@@ -20,13 +20,13 @@ export const ModalRoomInputs = () => {
 			</Button>
 			<Modal show={show} onHide={handleClose} className="form-room">
 				<Modal.Body className="modal-room">
-					<img className="room-logo-img" src={logoRoomAdd} />
 					<Form
 						onSubmit={e => {
 							e.preventDefault();
 						}}
 						className="form-input-add-room">
-						<Form.Group controlId="formNameRoom">
+						<img className="room-logo-img" src={logoRoomAdd} />
+						<Form.Group controlId="formNameRoom" className="form-group-data">
 							<Form.Label className="modal-add-name-input">Nombre de la ubicación</Form.Label>
 							<Form.Control
 								required

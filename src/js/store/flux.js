@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom";
+import jwt_decode from "jwt-decode";
+
 const url = "https://plant-and-care.herokuapp.com";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			currentUser: null,
+			logedUser: null,
 			types: [],
 			grows: [],
 			plants: [
@@ -75,33 +78,90 @@ const getState = ({ getStore, getActions, setStore }) => {
 						password: password,
 						location: location
 					})
-				});
+				})
+					.then(response => response.json())
+					.then(answer => {
+						console.log("Success ", 200);
+					});
 			},
 
-			login: async (email, password) => {
-				let loginurl = url.concat("login");
-				var myHeaders = new Headers();
-				myHeaders.append("Authorization", "Basic ZW1haWxAaG90bWFpbC5jb20xMjM6MTIzNDU2NzQ=");
-				myHeaders.append("Content-Type", "application/json");
+			// login: async (email, password) => {
+			// 	let loginurl = url.concat("login");
+			// 	var myHeaders = new Headers();
+			// 	myHeaders.append("Authorization", "Basic ZW1haWxAaG90bWFpbC5jb20xMjM6MTIzNDU2NzQ=");
+			// 	myHeaders.append("Content-Type", "application/json");
 
-				var raw = JSON.stringify({ email: email, password: password });
+			// 	var raw = JSON.stringify({ email: email, password: password });
 
-				var requestOptions = {
+			// 	var requestOptions = {
+			// 		method: "POST",
+			// 		headers: myHeaders,
+			// 		body: raw,
+			// 		redirect: "follow"
+			// 	};
+
+			// 	try {
+			// 		console.log("working");
+			// 		let res = await fetch(loginurl, requestOptions);
+			// 		let result = await res.json();
+			// 		let token = await result;
+			// 		setStore({ token: token[0].token });
+			// 	} catch (error) {
+			// 		console.log("error", error);
+			// 	}
+			// },
+
+			login: loginData => {
+				fetch(url.concat("login"), {
 					method: "POST",
-					headers: myHeaders,
-					body: raw,
-					redirect: "follow"
-				};
+					body: JSON.stringify(loginData),
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(response => {
+						if (!response.ok) {
+							throw Error(response.status);
+						}
+						return response.json();
+					})
+					.then(answerDownload => {
+						var token = answerDownload.token;
+						localStorage.setItem("x-access-token", token);
+						getActions().getLocalStorageToken();
+						getActions().logedStore();
+						window.location.replace("/username/view" + getActions().logedStore());
+						console.log("Success: ", 200);
+					})
+					.catch(error => {
+						console.log("User not found", error);
+					});
+			},
 
-				try {
-					console.log("working");
-					let res = await fetch(loginurl, requestOptions);
-					let result = await res.json();
-					let token = await result;
-					setStore({ token: token[0].token });
-				} catch (error) {
-					console.log("error", error);
+			getLocalStorageToken: () => {
+				var token = localStorage.getItem("x-access-token");
+				const decoded = jwt_decode(token);
+				localStorage.setItem("logedUser", decoded.id);
+				getActions().setLoged(decoded.id);
+			},
+
+			logedStore: () => {
+				if (getStore().logedUser == null) {
+					return localStorage.getItem("logedUser");
+				} else {
+					return getStore().logedUser;
 				}
+			},
+
+			setLoged: id => {
+				localStorage.getItem("logedUser");
+				setStore((getStore().logedUser = localStorage.getItem("logedUser")));
+			},
+
+			logOut: () => {
+				localStorage.removeItem("x-access-token");
+				localStorage.removeItem("logedUser");
+				setStore((getStore().logedUser = null));
 			},
 
 			getTypesOptions: () => {
@@ -141,7 +201,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			createRoom: nameRoom => {
-				fetch(url.concat("/user/", getStore().currentUser, "/rooms"), {
+				fetch(url.concat("/user/", getActions().logedStore(), "/rooms"), {
 					method: "POST",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
@@ -163,7 +223,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			getRoom: () => {
-				fetch(url.concat("/user/", getStore().currentUser, "/rooms"))
+				fetch(url.concat("/user/", getActions().logedStore(), "/rooms"))
 					.then(response => {
 						if (!response.ok) {
 							throw new Error(response.status);
@@ -179,7 +239,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			deleteRoom: id => {
-				fetch(url.concat("/user/", getStore().currentUser, "/rooms/", id), {
+				fetch(url.concat("/user/", getActions().logedStore(), "/rooms/", id), {
 					method: "DELETE"
 				})
 					.then(response => {
@@ -197,7 +257,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			createPlant: (namePlant, locationPlant, typePlant, growPlant, sensorPlant) => {
-				fetch(url.concat("/user/", getStore().currentUser, "/rooms/", locationPlant, "/plants"), {
+				fetch(url.concat("/user/", getActions().logedStore(), "/rooms/", locationPlant, "/plants"), {
 					method: "POST",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
@@ -223,7 +283,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			getPlants: () => {
-				fetch(url.concat("/user/", getStore().currentUser, "/plants"))
+				fetch(url.concat("/user/", getActions().logedStore(), "/plants"))
 					.then(response => {
 						if (!response.ok) {
 							throw new Error(response.status);
