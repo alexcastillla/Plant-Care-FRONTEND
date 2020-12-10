@@ -4,7 +4,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			currentUser: null,
-			plantas: [],
 			types: [],
 			grows: [],
 			plants: [
@@ -162,6 +161,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.catch(error => {
 						console.log("Creating plant, error status: ", error);
+					});
+			},
+
+			getPlants: () => {
+				fetch(url.concat("/user/", getStore().currentUser, "/plants"))
+					.then(response => {
+						if (!response.ok) {
+							throw new Error(response.status);
+						}
+						return response.json();
+					})
+					.then(json => {
+						setStore({ plants: result });
+					})
+					.catch(error => {
+						console.log("Error status: ", error);
 					});
 			}
 		}
