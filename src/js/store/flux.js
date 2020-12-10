@@ -65,6 +65,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
+      addUser: (username, email, password, location) => {
+				fetch(url.concat("/register"), {
+					method: "POST",
+					headers: { "Content-type": "application/json/user" },
+					body: JSON.stringify({
+						username: username,
+						email: email,
+						password: password,
+						location: location
+					})
+				}},
 			getTypesOptions: () => {
 				fetch(url.concat("/types"))
 					.then(response => {
@@ -182,5 +193,4 @@ const getState = ({ getStore, getActions, setStore }) => {
 		}
 	};
 };
-
 export default getState;

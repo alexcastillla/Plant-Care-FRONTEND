@@ -1,0 +1,157 @@
+$green-color: #e3f8e8;
+$coral-color: #ff8785;
+$green-button-color: #009ba0;
+$black-as-blue: #2c3e50;
+$white: #ffff;
+
+
+.Save-register{
+    border-radius: 3.125rem;
+    background-color: $green-color;
+    font-size: 1.2rem;
+    border:none;
+    color:$black-as-blue;
+    font-weight: bold;
+    margin-bottom: 8rem;
+    margin-top: 3rem;
+    
+}
+.save-register:active{
+    border-radius: 3.125rem;
+    border: none;
+    background-color: $green-color;
+}
+
+.Save-register:hover{
+    background-color: $green-color;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.join-button-home{
+    background-color: $green-color;
+    width:  20rem;
+    border: none;
+    border-radius: 3.125rem;
+    color: $black-as-blue;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.join-button-home:hover{
+    background-color: $green-color;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+}
+.join-button-home:active{
+    // background-color: $coral-color;
+    border-radius: 3.125rem;
+    border: none;
+    background-color: $green-color;
+}
+
+.form-group{
+    text-align: center;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+   
+}
+
+.user-text{
+    border-radius: 3.125rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    
+}
+
+.email{
+    border-radius: 3.125rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.psswd{
+    border-radius: 50px;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.location-text{
+    border-radius: 50px;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.modal-dialog {
+    max-width: 18rem;
+}
+.modal-content{
+    border-radius: 25px;
+    border: 0.5rem $black-as-blue;
+    width: 24rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.Errormesage{
+    display: none;
+}
+.Errormesageshow{
+    text-align: center;
+    background-color:#ffcccc;
+    color: #9b0000;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.logo2{
+    height: 3rem;
+    transform: translateX(-6px);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.logocontainer{
+    width: 100%;
+    margin: 0;
+    display:flex;
+    justify-content: center;
+}
+.h4{
+    width: 100%;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.body-form{
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.form-inputs{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+}

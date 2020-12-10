@@ -1,11 +1,14 @@
 import React from "react";
 import "../../styles/home.scss";
+import "../../styles/registermodal.scss";
 import Row from "react-bootstrap/Row";
 import logo1 from "../../img/photo1.png";
+import logo2 from "../../img/logo2.jpg";
 import logo3 from "../../img/photo3.png";
 import logo4 from "../../img/photo4.png";
 import logo5 from "../../img/photo5.png";
 import logo6 from "../../img/photo6.png";
+import { Registermodal } from "../component/RegisterModal";
 
 export const Home = () => (
 	<div className="home">
@@ -49,6 +52,7 @@ export const Home = () => (
 			</div>
 			<div className="fith-section-row">
 				<p className="texto-6">No esperes más, empieza ahora mismo</p>
+        <Registermodal />
 				<img className="photo-6" src={logo6} />
 			</div>
 		</div>
