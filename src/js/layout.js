@@ -10,7 +10,6 @@ import { Userview } from "./views/userview";
 import { PlantSingleStatistic } from "./views/plantSingleStatistic.jsx";
 
 import injectContext from "./store/appContext";
-
 import { NavbarUser } from "./component/navbar_user.jsx";
 import { NavbarHome } from "./component/navbar_home.jsx";
 import { Footer } from "./component/footer.jsx";

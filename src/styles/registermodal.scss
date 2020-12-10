@@ -14,8 +14,14 @@ $white: #ffff;
     font-weight: bold;
     margin-bottom: 3rem;
     margin-top: 3rem;
-    
 }
+.Save-register:active{
+   color: $green-button-color;
+}
+.Save-register:focus{
+    color: $green-button-color;
+}
+
 .save-register:active{
     border-radius: 3.125rem;
     border: none;
@@ -56,8 +62,7 @@ $white: #ffff;
     margin-top: 5rem;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    font-size: 1.2rem;
-   
+    font-size: 1.2rem;   
 }
 
 .user-text{
@@ -67,7 +72,6 @@ $white: #ffff;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 1.2rem;
-    
 }
 
 .email{
@@ -80,7 +84,7 @@ $white: #ffff;
 }
 
 .psswd{
-    border-radius: 50px;
+    border-radius: 3.75rem;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
     font-family: 'Roboto', sans-serif;
@@ -89,6 +93,8 @@ $white: #ffff;
 }
 
 .location-text{
+    border-radius: 3.75rem;
+    margin-bottom: 3rem;
     border-radius: 50px;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
@@ -100,6 +106,7 @@ $white: #ffff;
 .modal-dialog {
     max-width: 18rem;
 }
+
 .modal-content{
     border-radius: 25px;
     border: 0.5rem $black-as-blue;
@@ -123,20 +130,36 @@ $white: #ffff;
 .logo2{
     height: 3rem;
     transform: translateX(-6px);
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 .logocontainer{
     width: 100%;
     margin: 0;
     display:flex;
     justify-content: center;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
 }
 .h4{
     width: 100%;
 }
 
+.upload{
+    color: white;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    margin-top: 1rem;
+    
+}
+
 .logo{
+    display: flex;
+    justify-content: center;
+}
+
+.upload{
     display: flex;
     justify-content: center;
 }
