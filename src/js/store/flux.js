@@ -301,7 +301,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return response.json();
 					})
 					.then(json => {
-						console.log(json, "holita papiiiiiiiiiiiiiiiiiii");
 						setStore({ plants: json });
 					})
 					.catch(error => {

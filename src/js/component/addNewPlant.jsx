@@ -58,27 +58,19 @@ export const ModalNewPlant = () => {
 								defaultValue="Elige...">
 								<option>Elige...</option>
 								{store.grows.map((grow, index) => {
-									return (
-										<option key={index}>
-											{grow.id} - {grow.name_grow_phase}
-										</option>
-									);
+									return <option key={index}>{grow.id}</option>;
 								})}
 							</Form.Control>
 							<Form.Label className="modal-name mt-2">Fase de crecimiento</Form.Label>
 							<Form.Control
 								className="inputPlant"
 								required
-								onChange={e => setGrowPlant(e.target.value)}
+								onChange={e => setGrowPlant(e.target.value[0])}
 								as="select"
 								defaultValue="Elige...">
 								<option>Elige...</option>
 								{store.types.map((type, index) => {
-									return (
-										<option key={index}>
-											{type.id} - {type.name_type}
-										</option>
-									);
+									return <option key={index}>{type.id}</option>;
 								})}
 							</Form.Control>
 							<Form.Label className="modal-name mt-2">Número de sensor</Form.Label>
@@ -95,13 +87,8 @@ export const ModalNewPlant = () => {
 						type="submit"
 						onClick={() => {
 							handleClose();
-							actions.createPlant(
-								namePlant,
-								locationPlant,
-								typePlant.charAt(0),
-								growPlant.charAt(0),
-								sensorPlant
-							);
+							console.log(typePlant.charAt(0));
+							actions.createPlant(namePlant, locationPlant, typePlant, growPlant, sensorPlant);
 						}}>
 						Guardar
 					</Button>
