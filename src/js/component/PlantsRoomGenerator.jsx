@@ -21,7 +21,7 @@ export const RoomGeneratorPlants = () => {
 			if (store.plants.length > 0) {
 				console.log("hola soy tu planta filtrada");
 				setFilteredPlants(
-					store.plants.filter(planta => planta.username_plant.toLowerCase().includes(search.toLowerCase()))
+					store.plants.filter(planta => planta.name_room.toLowerCase().includes(search.toLowerCase()))
 				);
 			}
 		},
@@ -36,7 +36,7 @@ export const RoomGeneratorPlants = () => {
 					<input
 						className="srch"
 						type="text"
-						placeholder="Ubicación"
+						placeholder="Habitaciones"
 						onChange={e => setSearch(e.target.value)}
 					/>
 				</div>

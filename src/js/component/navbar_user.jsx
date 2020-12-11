@@ -9,7 +9,7 @@ export const NavbarUser = () => {
 	const { store, actions } = useContext(Context);
 	return (
 		<nav className="navbar navbar-light">
-			<Link to="/">
+			<Link to="/username/view">
 				<img className="logo-navbar" src={LogoNavbar} />
 			</Link>
 			<div className="ml-auto">
