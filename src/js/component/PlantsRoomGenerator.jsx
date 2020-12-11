@@ -18,9 +18,12 @@ export const RoomGeneratorPlants = () => {
 
 	useEffect(
 		() => {
-			setFilteredPlants(
-				store.plants.filter(planta => planta.name_room.toLowerCase().includes(search.toLowerCase()))
-			);
+			if (store.plants.length > 0) {
+				console.log("hola soy tu planta filtrada");
+				setFilteredPlants(
+					store.plants.filter(planta => planta.username_plant.toLowerCase().includes(search.toLowerCase()))
+				);
+			}
 		},
 		[search, store.plants]
 	);
@@ -47,7 +50,7 @@ export const RoomGeneratorPlants = () => {
 								<ProgressBar animated variant="info" now={plant.humidity_sensor} />
 								<Card.Text className="temperature">{plant.temperature_sensor} °C</Card.Text>
 								<Card.Text className="name-room">#{plant.name_room}</Card.Text>
-								<Link to={`/username/${plant.name_plant}`}>
+								<Link to={`/username/${plant.username_plant}`}>
 									<button type="button" className="button-info">
 										Más info
 									</button>

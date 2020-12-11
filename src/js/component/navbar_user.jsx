@@ -13,9 +13,9 @@ export const NavbarUser = () => {
 				<img className="logo-navbar" src={LogoNavbar} />
 			</Link>
 			<div className="ml-auto">
-				<Button className="btn-navbar-view" onClick={(() => window.location.reload(), actions.logOut())}>
+				{/* <Button className="btn-navbar-view" onClick={(() => window.location.reload(), actions.logOut())}>
 					Logout
-				</Button>
+				</Button> */}
 			</div>
 		</nav>
 	);

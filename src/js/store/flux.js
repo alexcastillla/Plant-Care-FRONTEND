@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 
-const url = "https://plant-and-care.herokuapp.com";
+const url = "https://3000-bd7c9a83-b002-48f6-a911-14832ce83084.ws-eu03.gitpod.io";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
@@ -10,68 +10,68 @@ const getState = ({ getStore, getActions, setStore }) => {
 			types: [],
 			grows: [],
 			plants: [
-				{
-					id: 1,
-					id_room: 1,
-					name_plant: "Rosalia",
-					name_room: "Habitacion",
-					tipo_plant: "Exterior",
-					grow_phase: "Germinación",
-					sensor_number: "111",
-					humidity_max_ideal: 85,
-					humidity_min_ideal: 80,
-					temperature_max_ideal: 38,
-					temperature_min_ideal: 3,
-					humidity_sensor: 83,
-					temperature_sensor: 24
-				},
-				{
-					id: 2,
-					id_room: 1,
-					name_plant: "Pepa",
-					name_room: "Habitacion",
-					tipo_plant: "Interior",
-					grow_phase: "Crecimiento",
-					sensor_number: "112",
-					humidity_max_ideal: 70,
-					humidity_min_ideal: 60,
-					temperature_max_ideal: 24,
-					temperature_min_ideal: 10,
-					humidity_sensor: 50,
-					temperature_sensor: 22
-				},
-				{
-					id: 3,
-					id_room: 2,
-					name_plant: "Lucia",
-					name_room: "Terraza",
-					tipo_plant: "Exterior",
-					grow_phase: "Maduración",
-					sensor_number: "113",
-					humidity_max_ideal: 50,
-					humidity_min_ideal: 20,
-					temperature_max_ideal: 38,
-					temperature_min_ideal: 3,
-					humidity_sensor: 83,
-					temperature_sensor: 24
-				}
+				// {
+				// 	id: 1,
+				// 	id_room: 1,
+				// 	name_plant: "Rosalia",
+				// 	name_room: "Habitacion",
+				// 	tipo_plant: "Exterior",
+				// 	grow_phase: "Germinación",
+				// 	sensor_number: "111",
+				// 	humidity_max_ideal: 85,
+				// 	humidity_min_ideal: 80,
+				// 	temperature_max_ideal: 38,
+				// 	temperature_min_ideal: 3,
+				// 	humidity_sensor: 83,
+				// 	temperature_sensor: 24
+				// },
+				// {
+				// 	id: 2,
+				// 	id_room: 1,
+				// 	name_plant: "Pepa",
+				// 	name_room: "Habitacion",
+				// 	tipo_plant: "Interior",
+				// 	grow_phase: "Crecimiento",
+				// 	sensor_number: "112",
+				// 	humidity_max_ideal: 70,
+				// 	humidity_min_ideal: 60,
+				// 	temperature_max_ideal: 24,
+				// 	temperature_min_ideal: 10,
+				// 	humidity_sensor: 50,
+				// 	temperature_sensor: 22
+				// },
+				// {
+				// 	id: 3,
+				// 	id_room: 2,
+				// 	name_plant: "Lucia",
+				// 	name_room: "Terraza",
+				// 	tipo_plant: "Exterior",
+				// 	grow_phase: "Maduración",
+				// 	sensor_number: "113",
+				// 	humidity_max_ideal: 50,
+				// 	humidity_min_ideal: 20,
+				// 	temperature_max_ideal: 38,
+				// 	temperature_min_ideal: 3,
+				// 	humidity_sensor: 83,
+				// 	temperature_sensor: 24
+				// }
 			],
 			room: [
-				{
-					id: 1,
-					name_room: "Habitación"
-				},
-				{
-					id: 2,
-					name_room: "Terraza"
-				}
+				// {
+				// 	id: 1,
+				// 	name_room: "Habitación"
+				// },
+				// {
+				// 	id: 2,
+				// 	name_room: "Terraza"
+				// }
 			]
 		},
 		actions: {
 			addUser: (username, email, password, location) => {
 				fetch(url.concat("/register"), {
 					method: "POST",
-					headers: { "Content-type": "application/json/user" },
+					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
 						username: username,
 						email: email,
@@ -79,7 +79,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						location: location
 					})
 				})
-					.then(response => response.json())
+					.then(response => response.text())
 					.then(answer => {
 						console.log("Success ", 200);
 					});
@@ -111,26 +111,31 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// 	}
 			// },
 
-			login: loginData => {
-				fetch(url.concat("login"), {
+			login: (email, password) => {
+				fetch(url.concat("/login"), {
 					method: "POST",
-					body: JSON.stringify(loginData),
+					body: JSON.stringify({
+						email: email,
+						password: password
+					}),
 					headers: {
 						"Content-Type": "application/json"
 					}
 				})
 					.then(response => {
+						console.log(response, "holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 						if (!response.ok) {
 							throw Error(response.status);
 						}
 						return response.json();
 					})
 					.then(answerDownload => {
-						var token = answerDownload.token;
+						console.log(answerDownload);
+						var token = answerDownload[0].token;
 						localStorage.setItem("x-access-token", token);
 						getActions().getLocalStorageToken();
 						getActions().logedStore();
-						window.location.replace("/username/view" + getActions().logedStore());
+						window.location.replace("/username/view");
 						console.log("Success: ", 200);
 					})
 					.catch(error => {
@@ -174,7 +179,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(respAsJson => {
 						respAsJson.map(type => {
-							setStore(types => [...types, type]);
+							// setStore(types => [...types, type]);
+							setStore({ types: respAsJson });
 						});
 					})
 					.catch(error => {
@@ -192,7 +198,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(respAsJson => {
 						respAsJson.map(grow => {
-							setStore(grows => [...grows, grow]);
+							// setStore(grows => [...grows, grow]);
+							setStore({ grows: respAsJson });
+							// setStore({ room: json });
 						});
 					})
 					.catch(error => {
@@ -231,7 +239,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return response.json();
 					})
 					.then(json => {
-						setStore({ room: result });
+						setStore({ room: json });
 					})
 					.catch(error => {
 						console.log("Error status: ", error);
@@ -239,6 +247,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			deleteRoom: id => {
+				console.log(id, "soy el id que quiero borrar");
 				fetch(url.concat("/user/", getActions().logedStore(), "/rooms/", id), {
 					method: "DELETE"
 				})
@@ -249,6 +258,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return response.json();
 					})
 					.then(() => {
+						console.log("estoy cogiendo de nuevo los rooms");
 						getActions().getRoom();
 					})
 					.catch(error => {
@@ -291,7 +301,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return response.json();
 					})
 					.then(json => {
-						setStore({ plants: result });
+						console.log(json, "holita papiiiiiiiiiiiiiiiiiii");
+						setStore({ plants: json });
 					})
 					.catch(error => {
 						console.log("Error status: ", error);

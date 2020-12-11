@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import getState from "./flux.js";
 
 // Don't change, here is where we initialize our context, by default it's just going to be null.
@@ -22,8 +22,8 @@ const injectContext = PassedComponent => {
 		);
 
 		useEffect(() => {
-			actions.getTypesOptions();
-			actions.getGrowOptions();
+			state.actions.getTypesOptions();
+			state.actions.getGrowOptions();
 			if (localStorage.getItem("x-access-token") != null) {
 				state.actions.getLocalStorageToken();
 			}
