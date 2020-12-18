@@ -5,92 +5,92 @@ $black-as-blue: #2c3e50;
 $white: #ffff;
 
 
-.Save-register{
-    border-radius: 3.125rem;
-    background-color: $green-color;
-    font-size: 1.2rem;
-    border:none;
-    color:$black-as-blue;
-    font-weight: bold;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
-}
-.Save-register:active{
-   color: $green-button-color;
-}
-.Save-register:focus{
-    color: $green-button-color;
-}
+// .Save-register{
+//     border-radius: 3.125rem;
+//     background-color: $green-color;
+//     font-size: 1.2rem;
+//     border:none;
+//     color:$black-as-blue;
+//     font-weight: bold;
+//     margin-bottom: 3rem;
+//     margin-top: 3rem;
+// }
+// .Save-register:active{
+//    color: $green-button-color;
+// }
+// .Save-register:focus{
+//     color: $green-button-color;
+// }
 
-.save-register:active{
-    border-radius: 3.125rem;
-    border: none;
-    background-color: $green-color;
-}
+// .save-register:active{
+//     border-radius: 3.125rem;
+//     border: none;
+//     background-color: $green-color;
+// }
 
-.Save-register:hover{
-    background-color: $green-color;
-    font-size: 1.2rem;
-    font-family: 'Roboto', sans-serif;
-}
+// .Save-register:hover{
+//     background-color: $green-color;
+//     font-size: 1.2rem;
+//     font-family: 'Roboto', sans-serif;
+// }
 
-.join-button-home{
-    background-color: $green-color;
-    width:  22rem;
-    border: none;
-    border-radius: 3.125rem;
-    color: $black-as-blue;
-    font-weight: bold;
-    font-size: 2.2rem;
-    font-family: 'Roboto', sans-serif;
-}
+// .join-button-home{
+//     background-color: $green-color;
+//     width:  22rem;
+//     border: none;
+//     border-radius: 3.125rem;
+//     color: $black-as-blue;
+//     font-weight: bold;
+//     font-size: 2.2rem;
+//     font-family: 'Roboto', sans-serif;
+// }
 
-.join-button-home:hover{
-    background-color: $green-color;
-    font-size: 2.2rem;
-    font-family: 'Roboto', sans-serif;
-}
-.join-button-home:active{
-    border-radius: 3.125rem;
-    border: none;
-    background-color: $green-color;
-}
+// .join-button-home:hover{
+//     background-color: $green-color;
+//     font-size: 2.2rem;
+//     font-family: 'Roboto', sans-serif;
+// }
+// .join-button-home:active{
+//     border-radius: 3.125rem;
+//     border: none;
+//     background-color: $green-color;
+// }
 
-.form-group{
-    text-align: center;
-    margin-bottom: 5rem;
-    margin-top: 5rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 1.2rem;   
-}
+// .form-group{
+//     text-align: center;
+//     margin-bottom: 5rem;
+//     margin-top: 5rem;
+//     font-family: 'Roboto', sans-serif;
+//     font-weight: bold;
+//     font-size: 1.2rem;   
+// }
 
-.user-text{
-    border-radius: 3.125rem;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
+// .user-text{
+//     border-radius: 3.125rem;
+//     margin-bottom: 0.5rem;
+//     margin-top: 0.5rem;
+//     font-family: 'Roboto', sans-serif;
+//     font-weight: bold;
+//     font-size: 1.2rem;
+// }
 
-.email{
-    border-radius: 3.125rem;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
+// .email{
+//     border-radius: 3.125rem;
+//     margin-bottom: 0.5rem;
+//     margin-top: 0.5rem;
+//     font-family: 'Roboto', sans-serif;
+//     font-weight: bold;
+//     font-size: 1.2rem;
+// }
 
-.psswd{
-    border-radius: 3.75rem;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
+// .psswd{
+//     border-radius: 3.75rem;
+//     margin-bottom: 0.5rem;
+//     margin-top: 0.5rem;
+//     font-family: 'Roboto', sans-serif;
+//     font-weight: bold;
+//     font-size: 1.2rem;
+// }
 
 .location-text{
     border-radius: 3.75rem;
@@ -103,17 +103,17 @@ $white: #ffff;
     font-size: 1.2rem;
 }
 
-.modal-dialog {
-    max-width: 26rem;
-}
+// .modal-dialog {
+//     max-width: 26rem;
+// }
 
-.modal-content{
-    border-radius: 25px;
-    border: 0.5rem $black-as-blue;
-    width: 26rem;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-}
+// .modal-content{
+//     border-radius: 25px;
+//     border: 0.5rem $black-as-blue;
+//     width: 26rem;
+//     margin-top: 5rem;
+//     margin-bottom: 5rem;
+// }
 .Errormesage{
     display: none;
 }
@@ -127,53 +127,53 @@ $white: #ffff;
     font-weight: bold;
     font-size: 1.2rem;
 }
-.logo2{
-    height: 3rem;
-    transform: translateX(-6px);
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-}
-.logocontainer{
-    width: 100%;
-    margin: 0;
-    display:flex;
-    justify-content: center;
-    margin-bottom: 4rem;
-    margin-top: 4rem;
-}
-.h4{
-    width: 100%;
-}
+// .logo2{
+//     height: 3rem;
+//     transform: translateX(-6px);
+//     margin-top: 3rem;
+//     margin-bottom: 3rem;
+// }
+// .logocontainer{
+//     width: 100%;
+//     margin: 0;
+//     display:flex;
+//     justify-content: center;
+//     margin-bottom: 4rem;
+//     margin-top: 4rem;
+// }
+// .h4{
+//     width: 100%;
+// }
 
-.upload{
-    color: white;
-    padding: 0.5rem;
-    font-family: sans-serif;
-    border-radius: 0.3rem;
-    margin-top: 1rem;
+// .upload{
+//     color: white;
+//     padding: 0.5rem;
+//     font-family: sans-serif;
+//     border-radius: 0.3rem;
+//     margin-top: 1rem;
     
-}
+// }
 
-.logo{
-    display: flex;
-    justify-content: center;
-}
+// .logo{
+//     display: flex;
+//     justify-content: center;
+// }
 
-.upload{
-    display: flex;
-    justify-content: center;
-}
+// .upload{
+//     display: flex;
+//     justify-content: center;
+// }
 
-.body-form{
-    margin-left: 2rem;
-    margin-right: 2rem;
-}
+// .body-form{
+//     margin-left: 2rem;
+//     margin-right: 2rem;
+// }
 
-.form-inputs{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
+// .form-inputs{
+//     margin-top: 1rem;
+//     margin-bottom: 1rem;
+//     text-align: center;
+//     font-family: 'Roboto', sans-serif;
+//     font-weight: bold;
+//     font-size: 1.2rem;
+// }

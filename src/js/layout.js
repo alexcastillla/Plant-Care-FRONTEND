@@ -5,6 +5,7 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Error } from "./views/error";
+import { LogUser } from "./views/loguin";
 import { PlantsInfo } from "./views/single";
 import { Userview } from "./views/userview";
 import { PlantSingleStatistic } from "./views/plantSingleStatistic.jsx";
@@ -28,6 +29,10 @@ const Layout = () => {
 						<Route exact path="/">
 							<NavbarHome />
 							<Home />
+						</Route>
+						<Route exact path="/user/log">
+							<NavbarHome />
+							<LogUser />
 						</Route>
 						<Route exact path="/username/view">
 							<NavbarUser />

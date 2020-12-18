@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 
-const url = "https://3000-bd7c9a83-b002-48f6-a911-14832ce83084.ws-eu03.gitpod.io";
+const url = "https://3000-be20f005-c884-4bdd-a208-456c66166851.ws-eu03.gitpod.io";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
