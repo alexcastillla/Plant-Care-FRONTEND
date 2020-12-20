@@ -5,66 +5,67 @@ const url = "https://3000-be20f005-c884-4bdd-a208-456c66166851.ws-eu03.gitpod.io
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
+		// Añadido valores predefinidos para ver el comportamiento de la aplicación
 		store: {
 			logedUser: null,
 			types: [],
 			grows: [],
 			plants: [
-				// {
-				// 	id: 1,
-				// 	id_room: 1,
-				// 	name_plant: "Rosalia",
-				// 	name_room: "Habitacion",
-				// 	tipo_plant: "Exterior",
-				// 	grow_phase: "Germinación",
-				// 	sensor_number: "111",
-				// 	humidity_max_ideal: 85,
-				// 	humidity_min_ideal: 80,
-				// 	temperature_max_ideal: 38,
-				// 	temperature_min_ideal: 3,
-				// 	humidity_sensor: 83,
-				// 	temperature_sensor: 24
-				// },
-				// {
-				// 	id: 2,
-				// 	id_room: 1,
-				// 	name_plant: "Pepa",
-				// 	name_room: "Habitacion",
-				// 	tipo_plant: "Interior",
-				// 	grow_phase: "Crecimiento",
-				// 	sensor_number: "112",
-				// 	humidity_max_ideal: 70,
-				// 	humidity_min_ideal: 60,
-				// 	temperature_max_ideal: 24,
-				// 	temperature_min_ideal: 10,
-				// 	humidity_sensor: 50,
-				// 	temperature_sensor: 22
-				// },
-				// {
-				// 	id: 3,
-				// 	id_room: 2,
-				// 	name_plant: "Lucia",
-				// 	name_room: "Terraza",
-				// 	tipo_plant: "Exterior",
-				// 	grow_phase: "Maduración",
-				// 	sensor_number: "113",
-				// 	humidity_max_ideal: 50,
-				// 	humidity_min_ideal: 20,
-				// 	temperature_max_ideal: 38,
-				// 	temperature_min_ideal: 3,
-				// 	humidity_sensor: 83,
-				// 	temperature_sensor: 24
-				// }
+				{
+					id: 1,
+					id_room: 1,
+					name_plant: "Rosalia",
+					name_room: "Habitacion",
+					tipo_plant: "Exterior",
+					grow_phase: "Germinación",
+					sensor_number: "111",
+					humidity_max_ideal: 85,
+					humidity_min_ideal: 80,
+					temperature_max_ideal: 38,
+					temperature_min_ideal: 3,
+					humidity_sensor: 83,
+					temperature_sensor: 24
+				},
+				{
+					id: 2,
+					id_room: 1,
+					name_plant: "Pepa",
+					name_room: "Habitacion",
+					tipo_plant: "Interior",
+					grow_phase: "Crecimiento",
+					sensor_number: "112",
+					humidity_max_ideal: 70,
+					humidity_min_ideal: 60,
+					temperature_max_ideal: 24,
+					temperature_min_ideal: 10,
+					humidity_sensor: 50,
+					temperature_sensor: 22
+				},
+				{
+					id: 3,
+					id_room: 2,
+					name_plant: "Lucia",
+					name_room: "Terraza",
+					tipo_plant: "Exterior",
+					grow_phase: "Maduración",
+					sensor_number: "113",
+					humidity_max_ideal: 50,
+					humidity_min_ideal: 20,
+					temperature_max_ideal: 38,
+					temperature_min_ideal: 3,
+					humidity_sensor: 83,
+					temperature_sensor: 24
+				}
 			],
 			room: [
-				// {
-				// 	id: 1,
-				// 	name_room: "Habitación"
-				// },
-				// {
-				// 	id: 2,
-				// 	name_room: "Terraza"
-				// }
+				{
+					id: 1,
+					name_room: "Habitación"
+				},
+				{
+					id: 2,
+					name_room: "Terraza"
+				}
 			]
 		},
 		actions: {
@@ -85,32 +86,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
 			},
 
-			// login: async (email, password) => {
-			// 	let loginurl = url.concat("login");
-			// 	var myHeaders = new Headers();
-			// 	myHeaders.append("Authorization", "Basic ZW1haWxAaG90bWFpbC5jb20xMjM6MTIzNDU2NzQ=");
-			// 	myHeaders.append("Content-Type", "application/json");
-
-			// 	var raw = JSON.stringify({ email: email, password: password });
-
-			// 	var requestOptions = {
-			// 		method: "POST",
-			// 		headers: myHeaders,
-			// 		body: raw,
-			// 		redirect: "follow"
-			// 	};
-
-			// 	try {
-			// 		console.log("working");
-			// 		let res = await fetch(loginurl, requestOptions);
-			// 		let result = await res.json();
-			// 		let token = await result;
-			// 		setStore({ token: token[0].token });
-			// 	} catch (error) {
-			// 		console.log("error", error);
-			// 	}
-			// },
-
 			login: (email, password) => {
 				fetch(url.concat("/login"), {
 					method: "POST",
@@ -123,7 +98,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					}
 				})
 					.then(response => {
-						console.log(response, "holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 						if (!response.ok) {
 							throw Error(response.status);
 						}
@@ -179,7 +153,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(respAsJson => {
 						respAsJson.map(type => {
-							// setStore(types => [...types, type]);
 							setStore({ types: respAsJson });
 						});
 					})
@@ -198,9 +171,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(respAsJson => {
 						respAsJson.map(grow => {
-							// setStore(grows => [...grows, grow]);
 							setStore({ grows: respAsJson });
-							// setStore({ room: json });
 						});
 					})
 					.catch(error => {
