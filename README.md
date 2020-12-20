@@ -1,6 +1,6 @@
 # Plant Care Final Project 4Geeks
 
-<p align="center"><img src="https://i.ibb.co/hCRyZK3/Logo.png" alt="Logo" border="0"></p>
+<p align="center"><img width="600px" src="https://i.ibb.co/hCRyZK3/Logo.png" alt="Logo"></p>
 
 Proyecto final colaborativo de 4Geeks Academy, elaborado junto a Aurelian Voinea (@aurelianvoinea6).
 
