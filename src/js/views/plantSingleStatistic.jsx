@@ -15,7 +15,7 @@ export const PlantSingleStatistic = () => {
 	const { store, actions } = useContext(Context);
 	let { plantName } = useParams();
 
-	let plant = store.plants.find(plant => plant.name_plant == String(plantName));
+	let plant = store.plants.find(plant => plant.username_plant == String(plantName));
 
 	useEffect(() => {
 		let temperature_input = document.querySelector(".chart-temperature");

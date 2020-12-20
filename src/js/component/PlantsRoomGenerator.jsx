@@ -6,7 +6,7 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 import Iconcard from "../../img/icon_card_plant.png";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
-import { ModalNewPlant } from "../component/addNewPlant.jsx";
+import { ModalNewPlant } from "./addNewPlant.jsx";
 import { ModalRoomInputs } from "./addNewRoom.jsx";
 import "../../styles/PlantsRoomGenerator.scss";
 import { Button } from "react-bootstrap/Button";
@@ -18,9 +18,12 @@ export const RoomGeneratorPlants = () => {
 
 	useEffect(
 		() => {
-			setFilteredPlants(
-				store.plants.filter(planta => planta.name_room.toLowerCase().includes(search.toLowerCase()))
-			);
+			if (store.plants.length > 0) {
+				console.log("hola soy tu planta filtrada");
+				setFilteredPlants(
+					store.plants.filter(planta => planta.name_room.toLowerCase().includes(search.toLowerCase()))
+				);
+			}
 		},
 		[search, store.plants]
 	);
@@ -33,21 +36,21 @@ export const RoomGeneratorPlants = () => {
 					<input
 						className="srch"
 						type="text"
-						placeholder="Ubicación"
+						placeholder="Habitaciones"
 						onChange={e => setSearch(e.target.value)}
 					/>
 				</div>
 				<div className="direction-card">
 					{filteredPlants.map((plant, idx) => (
-						<Card style={{ width: "17rem" }} className="card-plant" key={idx}>
-							<Card.Img variant="top" src={Iconcard} className="card-img" />
+						<Card className="card-plant" key={idx}>
+							<img src={Iconcard} className="card-img-top" />
 							<Card.Body>
 								<Card.Title>{plant.name_plant}</Card.Title>
 								<Card.Text className="humidity">Humedad:</Card.Text>
 								<ProgressBar animated variant="info" now={plant.humidity_sensor} />
 								<Card.Text className="temperature">{plant.temperature_sensor} °C</Card.Text>
 								<Card.Text className="name-room">#{plant.name_room}</Card.Text>
-								<Link to={`/username/${plant.name_plant}`}>
+								<Link to={`/username/${plant.username_plant}`}>
 									<button type="button" className="button-info">
 										Más info
 									</button>

@@ -1,9 +1,13 @@
-const url = "https://plant-and-care.herokuapp.com";
+import { Link } from "react-router-dom";
+import jwt_decode from "jwt-decode";
+
+const url = "https://3000-be20f005-c884-4bdd-a208-456c66166851.ws-eu03.gitpod.io";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
+		// Añadido valores predefinidos para ver el comportamiento de la aplicación
 		store: {
-			currentUser: null,
+			logedUser: null,
 			types: [],
 			grows: [],
 			plants: [
@@ -68,40 +72,75 @@ const getState = ({ getStore, getActions, setStore }) => {
 			addUser: (username, email, password, location) => {
 				fetch(url.concat("/register"), {
 					method: "POST",
-					headers: { "Content-type": "application/json/user" },
+					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
 						username: username,
 						email: email,
 						password: password,
 						location: location
 					})
-				});
+				})
+					.then(response => response.text())
+					.then(answer => {
+						console.log("Success ", 200);
+					});
 			},
 
-			login: async (email, password) => {
-				let loginurl = url.concat("login");
-				var myHeaders = new Headers();
-				myHeaders.append("Authorization", "Basic ZW1haWxAaG90bWFpbC5jb20xMjM6MTIzNDU2NzQ=");
-				myHeaders.append("Content-Type", "application/json");
-
-				var raw = JSON.stringify({ email: email, password: password });
-
-				var requestOptions = {
+			login: (email, password) => {
+				fetch(url.concat("/login"), {
 					method: "POST",
-					headers: myHeaders,
-					body: raw,
-					redirect: "follow"
-				};
+					body: JSON.stringify({
+						email: email,
+						password: password
+					}),
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(response => {
+						if (!response.ok) {
+							throw Error(response.status);
+						}
+						return response.json();
+					})
+					.then(answerDownload => {
+						console.log(answerDownload);
+						var token = answerDownload[0].token;
+						localStorage.setItem("x-access-token", token);
+						getActions().getLocalStorageToken();
+						getActions().logedStore();
+						window.location.replace("/username/view");
+						console.log("Success: ", 200);
+					})
+					.catch(error => {
+						console.log("User not found", error);
+					});
+			},
 
-				try {
-					console.log("working");
-					let res = await fetch(loginurl, requestOptions);
-					let result = await res.json();
-					let token = await result;
-					setStore({ token: token[0].token });
-				} catch (error) {
-					console.log("error", error);
+			getLocalStorageToken: () => {
+				var token = localStorage.getItem("x-access-token");
+				const decoded = jwt_decode(token);
+				localStorage.setItem("logedUser", decoded.id);
+				getActions().setLoged(decoded.id);
+			},
+
+			logedStore: () => {
+				if (getStore().logedUser == null) {
+					return localStorage.getItem("logedUser");
+				} else {
+					return getStore().logedUser;
 				}
+			},
+
+			setLoged: id => {
+				localStorage.getItem("logedUser");
+				setStore((getStore().logedUser = localStorage.getItem("logedUser")));
+			},
+
+			logOut: () => {
+				localStorage.removeItem("x-access-token");
+				localStorage.removeItem("logedUser");
+				setStore((getStore().logedUser = null));
 			},
 
 			getTypesOptions: () => {
@@ -114,7 +153,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(respAsJson => {
 						respAsJson.map(type => {
-							setStore(types => [...types, type]);
+							setStore({ types: respAsJson });
 						});
 					})
 					.catch(error => {
@@ -132,7 +171,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(respAsJson => {
 						respAsJson.map(grow => {
-							setStore(grows => [...grows, grow]);
+							setStore({ grows: respAsJson });
 						});
 					})
 					.catch(error => {
@@ -141,7 +180,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			createRoom: nameRoom => {
-				fetch(url.concat("/user/", getStore().currentUser, "/rooms"), {
+				fetch(url.concat("/user/", getActions().logedStore(), "/rooms"), {
 					method: "POST",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
@@ -163,7 +202,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			getRoom: () => {
-				fetch(url.concat("/user/", getStore().currentUser, "/rooms"))
+				fetch(url.concat("/user/", getActions().logedStore(), "/rooms"))
 					.then(response => {
 						if (!response.ok) {
 							throw new Error(response.status);
@@ -171,7 +210,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return response.json();
 					})
 					.then(json => {
-						setStore({ room: result });
+						setStore({ room: json });
 					})
 					.catch(error => {
 						console.log("Error status: ", error);
@@ -179,7 +218,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			deleteRoom: id => {
-				fetch(url.concat("/user/", getStore().currentUser, "/rooms/", id), {
+				console.log(id, "soy el id que quiero borrar");
+				fetch(url.concat("/user/", getActions().logedStore(), "/rooms/", id), {
 					method: "DELETE"
 				})
 					.then(response => {
@@ -189,6 +229,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return response.json();
 					})
 					.then(() => {
+						console.log("estoy cogiendo de nuevo los rooms");
 						getActions().getRoom();
 					})
 					.catch(error => {
@@ -197,7 +238,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			createPlant: (namePlant, locationPlant, typePlant, growPlant, sensorPlant) => {
-				fetch(url.concat("/user/", getStore().currentUser, "/rooms/", locationPlant, "/plants"), {
+				fetch(url.concat("/user/", getActions().logedStore(), "/rooms/", locationPlant, "/plants"), {
 					method: "POST",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
@@ -223,7 +264,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			getPlants: () => {
-				fetch(url.concat("/user/", getStore().currentUser, "/plants"))
+				fetch(url.concat("/user/", getActions().logedStore(), "/plants"))
 					.then(response => {
 						if (!response.ok) {
 							throw new Error(response.status);
@@ -231,7 +272,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return response.json();
 					})
 					.then(json => {
-						setStore({ plants: result });
+						setStore({ plants: json });
 					})
 					.catch(error => {
 						console.log("Error status: ", error);

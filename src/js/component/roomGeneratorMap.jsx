@@ -14,13 +14,14 @@ export const ButtonRoomGenerator = () => {
 						<p>{item.name_room}</p>
 						<i
 							className="far fa-times-circle"
-							onClick={() => {
+							onClick={event => {
+								console.log(event, "soy el evento");
 								if (
 									window.confirm(
 										"¿Estás seguro? Si confirmas, se eliminará tanto la ubicación como sus plantas asociadas."
 									)
 								)
-									actions.deleteRoon(event.item.id);
+									actions.deleteRoom(item.id);
 							}}
 						/>
 					</button>

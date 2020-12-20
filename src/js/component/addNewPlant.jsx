@@ -30,8 +30,8 @@ export const ModalNewPlant = () => {
 						onSubmit={e => {
 							e.preventDefault();
 						}}
-						className="form-input-add-room">
-						<Form.Group controlId="formNameRoom">
+						className="form-group-plant">
+						<Form.Group controlId="formNameRoom" className="form-group-plant">
 							<Form.Label className="modal-name">Nombre de la planta</Form.Label>
 							<Form.Control
 								className="inputPlant"
@@ -50,24 +50,27 @@ export const ModalNewPlant = () => {
 							<Form.Control
 								className="inputPlant"
 								required
-								onChange={e => setTipoPlant(e.target.value)}
+								onChange={e => {
+									setTypePlant(e.target.value);
+									console.log(e.target.value);
+								}}
 								as="select"
 								defaultValue="Elige...">
 								<option>Elige...</option>
 								{store.grows.map((grow, index) => {
-									return <option key={index}>{grow.name_grow_phase}</option>;
+									return <option key={index}>{grow.id}</option>;
 								})}
 							</Form.Control>
 							<Form.Label className="modal-name mt-2">Fase de crecimiento</Form.Label>
 							<Form.Control
 								className="inputPlant"
 								required
-								onChange={e => setGrowPlant(e.target.value)}
+								onChange={e => setGrowPlant(e.target.value[0])}
 								as="select"
 								defaultValue="Elige...">
 								<option>Elige...</option>
 								{store.types.map((type, index) => {
-									return <option key={index}>{type.name_type}</option>;
+									return <option key={index}>{type.id}</option>;
 								})}
 							</Form.Control>
 							<Form.Label className="modal-name mt-2">Número de sensor</Form.Label>
@@ -84,6 +87,7 @@ export const ModalNewPlant = () => {
 						type="submit"
 						onClick={() => {
 							handleClose();
+							console.log(typePlant.charAt(0));
 							actions.createPlant(namePlant, locationPlant, typePlant, growPlant, sensorPlant);
 						}}>
 						Guardar

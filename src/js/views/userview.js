@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext, Fragment } from "react";
+import { Context } from "../store/appContext";
 import "../../styles/userview.scss";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -9,6 +10,13 @@ import { ButtonRoomGenerator } from "../component/roomGeneratorMap.jsx";
 import { RoomGeneratorPlants } from "../component/PlantsRoomGenerator.jsx";
 
 export const Userview = () => {
+	const { store, actions } = useContext(Context);
+
+	useEffect(() => {
+		actions.getRoom();
+		actions.getPlants();
+	}, []);
+
 	return (
 		<Fragment>
 			<div className="room-panel">
