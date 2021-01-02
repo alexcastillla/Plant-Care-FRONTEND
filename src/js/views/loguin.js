@@ -6,6 +6,8 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
+import Plant from "../../img/plant_nature.png";
+import LogoNavbar from "../../img/logo_navbar.jpg";
 
 export const LogUser = () => {
 	const { store, actions } = useContext(Context);
@@ -16,27 +18,32 @@ export const LogUser = () => {
 
 	return (
 		<Fragment>
-			<Row className="p-5 fragment-container">
-				<Col xs={12} md={12} lg={{ span: 4, offset: 2 }} xl={{ span: 4, offset: 2 }}>
-					<p className="tittle-message">Hello, Friend!</p>
-					<p>Enter your personal details and start journey with us</p>
+			<Row className="fragment-container">
+				<Col className="left-container" xs={12} md={12} lg={6} xl={6}>
+					<img className="logo-loguinpage" src={LogoNavbar} />
+					<img className="left-container-img" src={Plant} />
 				</Col>
-				<Col xs={12} md={12} lg={4} xl={4}>
-					<Form className="form-loguin pl-4 pr-4">
-						<p className={displayerror}>The {error} is invalid</p>
-						<Form.Group className="form-inputs">
-							<h1 className="mb-4">Sign In</h1>
-							<Form.Label>Email address</Form.Label>
-							<Form.Control className="email" onChange={e => setEmail(e.target.value)} />
+				<Col className="right-container" xs={12} md={12} lg={6} xl={6}>
+					<Form className="form-loguin">
+						<h1 className="tittle-loguin">SIGN IN</h1>
+						<Form.Group className="form-loguin-body">
+							<p className={displayerror}>The {error} is invalid</p>
+							<Form.Label>Email</Form.Label>
+							<Form.Control
+								type="email"
+								className="email-loguin"
+								onChange={e => setEmail(e.target.value)}
+								pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+							/>
 							<Form.Label>Password</Form.Label>
 							<Form.Control
 								type="password"
-								className="psswd"
+								className="password-loguin"
 								onChange={e => setPassword(e.target.value)}
 							/>
 						</Form.Group>
 						<Button
-							className="Save-login btn-block"
+							className="submit-loguin"
 							type="submit"
 							onClick={() => {
 								if (email.length < 5) {
@@ -49,8 +56,9 @@ export const LogUser = () => {
 									actions.login(email, password);
 								}
 							}}>
-							Send
+							Sign in
 						</Button>
+						<h6 className="account-register-question">Haven`t got account? Sign up</h6>
 					</Form>
 				</Col>
 			</Row>

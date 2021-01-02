@@ -29,25 +29,27 @@ const Layout = () => {
 						<Route exact path="/">
 							<NavbarHome />
 							<Home />
+							<Footer />
 						</Route>
-						<Route exact path="/user/log">
-							<NavbarHome />
+						<Route exact path="/loguin">
 							<LogUser />
 						</Route>
 						<Route exact path="/username/view">
 							<NavbarUser />
 							<Userview />
+							<Footer />
 						</Route>
 						<Route exact path="/username/:plantName">
 							<NavbarUser />
 							<PlantSingleStatistic />
+							<Footer />
 						</Route>
 						<Route>
 							<NavbarUser />
 							<Error />
+							<Footer />
 						</Route>
 					</Switch>
-					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>

@@ -5,14 +5,76 @@ $black-as-blue: #2c3e50;
 $white: #ffff;
 $font: 'Roboto', sans-serif;
 
-.fragment-container{
-    background-color: $green-color;
+.left-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    -webkit-box-align: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 4rem 4rem 12rem;
 }
+.logo-loguinpage{
+    height: 20%; 
+    width: 20%;
+    object-fit: contain;
+}
+
+.left-container-img{
+    height: 100%; 
+    width: 100%; 
+    object-fit: contain;
+}
+.right-container{
+    background: $green-color;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
 .tittle-message{
     font-weight: 700;
     font-size: 3rem;
 }
+.tittle-loguin{
+    font-weight: bold;
+}
 
-.email .psswd{
-    margin-left: 2rem;
+.form-loguin{
+    padding: 3rem 1rem;
+    display: flex;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+.email-loguin{
+    margin-bottom: 1.5rem;
+}
+.submit-loguin{
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: inherit;
+    color: white;
+    font-weight: 500;
+    font-size: 1.3rem;
+    background-color: $coral-color;
+    height: 3rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+}
+.account-register-question{
+    margin-top: 0.8rem;
 }
